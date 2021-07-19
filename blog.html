@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="static/css/semantic.min.css">
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">-->
+    <script>
+        function getage() {
+            let now=new Date().getFullYear();
+            return now-this.birth;
+        }
+        let student={
+            name: '启航',
+            birth: 2000,
+            //方法
+            age: getage
+        };
+
+        getage.apply(student,[]);//this指向了student，[]表示空参数
+    </script>
+</head>
+<body class="m-text-style">
+    <!--导航-->
+    <nav class="ui segment m-padded-tb-mini">
+        <div class="ui container">
+            <div class="ui stackable secondary menu">
+                <img class="ui image item m-padded-tb-mini" src="static/images/logo2.png" width="190" height="65">
+                <a href="#" class="m-item item m-mobile-hide"><i class="small home icon m-opacity-mini"></i>首页</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small idea icon m-opacity-mini"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small tags icon m-opacity-mini"></i>标签</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small clone icon m-opacity-mini"></i>归档</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small info icon m-opacity-mini"></i>关于我</a>
+                <div class="m-item right item m-mobile-hide">
+                    <div class="ui transparent input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle basic icon button m-location-top-right m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--中间内容-->
+    <div class="m-container-width-small m-padded-tb-large">
+        <div class="ui container">
+            <div class="ui top attached segment">
+                header
+            </div>
+            <div class="ui attached segment">
+                image
+            </div>
+            <div class="ui attached segment">
+                content
+            </div>
+            <div class="ui attached teal message">
+                message
+            </div>
+            <div class="ui attached segment">
+                comments
+            </div>
+        </div>
+    </div>
+    <div class="ui section divider"></div>
+    <!--底部-->
+    <footer class="ui vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui divided stackable grid">
+                <div class="three wide column center aligned">
+                    <div class="ui link list">
+                        <div class="item">
+                            <img src="static/images/doge2.jpg" class="ui rounded image" style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui header m-text-spaced m-text-lined">创意Blog</h4>
+                    <div class="ui link list">
+                        <a href="#" class="item">orange</a>
+                        <a href="#" class="item">orange</a>
+                        <a href="#" class="item">orange</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui header m-text-spaced m-text-lined">联系我</h4>
+                    <div class="ui link list">
+                        <a href="#" class="item">QQ:1518607977</a>
+                        <a href="#" class="item">WeChat:17365560507</a>
+                        <a href="#" class="item">Email:1518607977@qq.com</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui header m-text-spaced m-text-lined">I WANNA SAY</h4>
+                    <p class="m-text-spaced m-text-lined m-text-thin">开拓视野，冲破艰险，看见世界，身临其境，贴近彼此，感受生活，这就是生活的目的！</p>
+                </div>
+            </div>
+            <div class="ui section divider"></div>
+            <p class="m-text-spaced m-text-lined m-text-thin m-opacity-tiny">CopyRight © 2021 启航Blog Designed by
+                QiHangDuan_SUSE en
+                Rider</p>
+        </div>
+    </footer>
+
+<script src="static/js/jquery-3.2.1.js"></script>
+<script src="static/js/semantic.min.js"></script>
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+    </script>
+<!--<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>-->
+</body>
+</html>
