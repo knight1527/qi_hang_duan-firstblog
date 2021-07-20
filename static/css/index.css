@@ -68,6 +68,13 @@ body {
     margin-bottom: 0.3em !important;
     margin-top: 0.3em !important;
 }
+.m-margin-tb-small{
+    margin-bottom: 0.5em !important;
+    margin-top: 0.5em !important;
+}
+.m-margin-bottom-small{
+    margin-bottom: 0.5em !important;
+}
 /*-------Text-------*/
 .m-text{
     font-weight: 300 !important;
@@ -102,11 +109,16 @@ body {
 .m-mobile-show{
     display: none !important;
 }
+
+
 @media screen and (max-width: 768px){
     .m-mobile-hide{
         display: none !important;
     }
     .m-mobile-show{
         display: block !important;
+    }
+    .m-mobile-wide{
+        width: 100% !important;
     }
 }
