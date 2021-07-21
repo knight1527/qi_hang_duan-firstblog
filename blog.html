@@ -7,22 +7,10 @@
     <link rel="stylesheet" type="text/css" href="static/css/index.css">
     <link rel="stylesheet" type="text/css" href="static/css/semantic.min.css">
    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">-->
-    <script>
-        function getage() {
-            let now=new Date().getFullYear();
-            return now-this.birth;
-        }
-        let student={
-            name: '启航',
-            birth: 2000,
-            //方法
-            age: getage
-        };
-
-        getage.apply(student,[]);//this指向了student，[]表示空参数
-    </script>
 </head>
 <body class="m-text-style">
+<script src="static/js/jquery-3.2.1.js"></script>
+<script src="static/js/semantic.min.js"></script>
     <!--导航-->
     <nav class="ui segment m-padded-tb-mini">
         <div class="ui container">
@@ -257,8 +245,8 @@
         </div>
     </footer>
 
-<script src="static/js/jquery-3.2.1.js"></script>
-<script src="static/js/semantic.min.js"></script>
+<!--<script src="static/js/jquery-3.2.1.js"></script>
+<script src="static/js/semantic.min.js"></script>-->
     <script>
         $('.menu.toggle').click(function () {
             $('.m-item').toggleClass('m-mobile-hide');
