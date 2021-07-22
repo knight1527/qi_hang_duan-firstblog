@@ -4,6 +4,10 @@ body {
 }
 
 /*------container-----*/
+.m-container-width-big{
+    max-width: 76em !important;
+    margin: auto !important;
+}
 .m-container-width{
     max-width: 72em !important;
     margin: auto !important;
