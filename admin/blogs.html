@@ -42,7 +42,33 @@
     <div class="m-container-width-small m-padded-tb-large">
         <div class="ui container">
             <form action="#" method="post" class="ui form">
-                
+                <div class="inline fields">
+                    <div class="field" style="width: 40%">
+                        <div class="fluid">
+                            <input type="text" placeholder="标题" name="title">
+                        </div>
+                    </div>
+                    <div class="field" style="width: 35%">
+                        <div class="ui fluid multiple search normal selection dropdown">
+                            <input type="hidden" name="types">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">选择分类</div>
+                            <div class="menu">
+                                <div class="item" data-value="1">错误日志</div>
+                                <div class="item" data-value="2">开发者手册</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field" style="width: 10%">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="recommend" name="recommend">
+                            <label for="recommend">推荐</label>
+                        </div>
+                    </div>
+                    <div class="field" style="width: 15%">
+                        <button class="ui mini blue basic button"><i class="search icon"></i>Search</button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
