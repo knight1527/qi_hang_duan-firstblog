@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类</title>
+    <title>博客管理</title>
     <link rel="stylesheet" type="text/css" href="../static/css/index.css">
     <link rel="stylesheet" type="text/css" href="../static/css/semantic.min.css">
    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">-->
@@ -12,7 +12,7 @@
 <script src="../static/js/jquery-3.2.1.js"></script>
 <script src="../static/js/semantic.min.js"></script>
     <!--导航-->
-    <nav class="ui segment m-padded-tb-mini m-margin-none">
+    <nav class="ui segment m-padded-tb-mini m-margin-none" style="margin: 0 !important;">
         <div class="ui container">
             <div class="ui stackable secondary menu">
                 <h2 class="ui blue header item">博客管理</h2>
@@ -37,6 +37,14 @@
             <i class="sidebar icon"></i>
         </a>
     </nav>
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" class="item">发布</a>
+                <a href="#" class="blue active item">列表</a>
+            </div>
+        </div>
+    </div>
 
     <!--中间内容-->
     <div class="m-container-width-small m-padded-tb-large">
@@ -70,6 +78,64 @@
                     </div>
                 </div>
             </form>
+            <table class="ui celled table">
+                <thead class="m-text-thin">
+                    <tr>
+                        <th class="center aligned"></th>
+                        <th class="center aligned">标题</th>
+                        <th class="center aligned">类型</th>
+                        <th class="center aligned">推荐</th>
+                        <th class="center aligned">更新时间</th>
+                        <th class="center aligned">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center aligned">1</td>
+                        <td class="center aligned">浅谈Java集合</td>
+                        <td class="center aligned">JavaSE</td>
+                        <td class="center aligned">是</td>
+                        <td class="center aligned">2021-7-26</td>
+                        <td class="center aligned">
+                            <a href="#" class="ui mini blue button m-text-thin">编辑</a>
+                            <a href="#" class="ui mini orange button m-text-thin">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center aligned">1</td>
+                        <td class="center aligned">浅谈Java集合</td>
+                        <td class="center aligned">JavaSE</td>
+                        <td class="center aligned">是</td>
+                        <td class="center aligned">2021-7-26</td>
+                        <td class="center aligned">
+                            <a href="#" class="ui mini blue button m-text-thin">编辑</a>
+                            <a href="#" class="ui mini orange button m-text-thin">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center aligned">1</td>
+                        <td class="center aligned">浅谈Java集合</td>
+                        <td class="center aligned">JavaSE</td>
+                        <td class="center aligned">是</td>
+                        <td class="center aligned">2021-7-26</td>
+                        <td class="center aligned">
+                            <a href="#" class="ui mini blue button m-text-thin">编辑</a>
+                            <a href="#" class="ui mini orange button m-text-thin">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5">
+                            <a href="#" class="ui mini button">上一页</a>
+                            <a href="#" class="ui mini button">下一页</a>
+                        </th>
+                        <th class="center aligned">
+                            <a href="#" class="ui m-text-thin mini blue button">新增</a>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
     </div>
     <div class="ui section divider"></div>
