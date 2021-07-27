@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客发布</title>
+    <link rel="stylesheet" href="../static/lib/editormd/css/editormd.min.css">
+    <!--上md编辑器的css-->
+
     <link rel="stylesheet" type="text/css" href="../static/css/index.css">
     <link rel="stylesheet" type="text/css" href="../static/css/semantic.min.css">
    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">-->
@@ -68,7 +71,42 @@
                 </div>
 
                 <div class="field">
-                    <textarea name="content" placeholder="博客内容" cols="30" rows="10"></textarea>
+                    <div id="md-content" style="z-index: 1 !important;">
+                        <textarea style="display: none;">
+                            [TOC]
+
+#### Disabled options
+
+- TeX (Based on KaTeX);
+- Emoji;
+- Task lists;
+- HTML tags decode;
+- Flowchart and Sequence Diagram;
+
+#### Editor.md directory
+
+    editor.md/
+            lib/
+            css/
+            scss/
+            tests/
+            fonts/
+            images/
+            plugins/
+            examples/
+            languages/
+            editormd.js
+            ...
+
+```html
+&lt;!-- English --&gt;
+&lt;script src="../dist/js/languages/en.js"&gt;&lt;/script&gt;
+
+&lt;!-- 繁體中文 --&gt;
+&lt;script src="../dist/js/languages/zh-tw.js"&gt;&lt;/script&gt;
+```
+                        </textarea>
+                    </div>
                 </div>
 
                 <div class="two fields">
@@ -186,9 +224,31 @@
         </div>
     </footer>
 
+<!--md编辑器的js-->
+<script src="../static/lib/editormd/editormd.min.js"></script>
 <!--<script src="static/js/jquery-3.2.1.js"></script>
 <script src="static/js/semantic.min.js"></script>-->
     <script>
+        /*md编辑器js*/
+        var contentEditor;
+        $(function() {
+            contentEditor = editormd("md-content", {
+                width   : "100%",
+                height  : 640,
+                syncScrolling : "single",
+                path    : "../static/lib/editormd/lib/"
+            });
+
+            /*
+            // or
+            testEditor = editormd({
+                id      : "test-editormd",
+                width   : "90%",
+                height  : 640,
+                path    : "../lib/"
+            });
+            */
+        });
         /*移动端隐藏导航栏选项*/
         $('.menu.toggle').click(function () {
             $('.m-item').toggleClass('m-mobile-hide');
