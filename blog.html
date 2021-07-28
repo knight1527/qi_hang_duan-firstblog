@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
+    <link rel="stylesheet" href="static/lib/tocbot/tocbot.css">
+    <!--上引入tocbot目录生成插件（注：所有标题标签必须要有id才能识别）-->
     <link rel="stylesheet" href="static/lib/prism/prism.css">
     <!--上引入prism的css-->
     <link rel="stylesheet" href="static/css/animate.min.css">
@@ -41,9 +43,9 @@
     </nav>
 
     <!--中间内容-->
-    <div class="m-container-width-small m-padded-tb-large animated fadeInLeft">
+    <div id="waypoint" class="m-container-width-small m-padded-tb-large animated fadeInLeft">
         <div class="ui container">
-            <div class="ui top attached segment">
+            <div id="top" class="ui top attached segment">
                 <div class="ui horizontal link list">
                     <div class="item">
                         <img src="static/images/doge2.jpg"
@@ -68,7 +70,7 @@
                 </div>
                 <h2 class="ui center aligned header">文章标题</h2>
 
-                <div id="content" class="typo typo-selection m-padded-lr m-padded-tb-large">
+                <div id="content" class="typo typo-selection js-toc-content m-padded-lr m-padded-tb-large">
                     <h1>中文网页重设与排版：<i class="serif">Typo.css</i></h1><br/>
 
                     <h2 id="tagline" class="serif">一致化浏览器排版效果，构建最适合中文阅读的网页排版</h2>
@@ -114,7 +116,7 @@ public class SPFA_Demo2 {
     }
 
     //邻接表存图
-    static ArrayList<\Edge>[] edge;
+    static ArrayList< Edge>[] edge;
     /**
      * 参数n:给定图的顶点个数
      * 参数s:求取第s个顶点到其他所有顶点之间的最短距离
@@ -122,7 +124,7 @@ public class SPFA_Demo2 {
      * 函数功能:如果给定图不含负权回路，则可以得到最终结果，如果含有负权回路，则不能得到最终回路
      */
     public static boolean getShortPaths(int n,int s){
-        PriorityQueue<\Edge> list=new PriorityQueue<>(new Comparator<\Edge>() {
+        PriorityQueue< Edge> list=new PriorityQueue<>(new Comparator< Edge>() {
             @Override
             public int compare(Edge o1, Edge o2) {
                 return o1.value-o2.value;
@@ -131,7 +133,7 @@ public class SPFA_Demo2 {
         result=new long[n];
         boolean[] used=new boolean[n];
         int[] num=new int[n];
-        for(int i=0;i<\n;i++){
+        for(int i=0;i< n;i++){
             result[i]=Integer.MAX_VALUE;
             used[i]=false;
         }
@@ -147,7 +149,7 @@ public class SPFA_Demo2 {
         while(!list.isEmpty()){
             Edge temp=list.poll();
             for(Edge i:edge[temp.b]){
-                if(temp.value+i.value<\result[i.b]){
+                if(temp.value+i.value< result[i.b]){
                     result[i.b]=temp.value+i.value;
                     if(!used[i.b]) {
                         list.add(new Edge(i.b, (int) result[i.b]));
@@ -172,10 +174,10 @@ public class SPFA_Demo2 {
         int n=sc.nextInt(),p=sc.nextInt(),s=sc.nextInt();
         System.out.println("请输入具体边：");
         edge=new ArrayList[n];
-        for(int i=0;i<\n;i++){
+        for(int i=0;i< n;i++){
             edge[i]=new ArrayList<>();
         }
-        for(int i=0;i<\p;i++){
+        for(int i=0;i< p;i++){
             int a=sc.nextInt(),b=sc.nextInt(),value=sc.nextInt();
             edge[a].add(new Edge(b,value));
             //无向图还需添加反边
@@ -606,7 +608,7 @@ h5,h6{font-size:1em;}
                     </div>
                 </div>
             </div>
-            <div class="ui attached segment">
+            <div id="comment" class="ui attached segment">
                 <!--comments-->
                 <div class="ui blue segment">
                     <div class="ui threaded comments">
@@ -708,7 +710,27 @@ h5,h6{font-size:1em;}
             </div>
         </div>
     </div>
+    <!--绝对布局小块儿-->
+    <div id="right-bottom-toolbar" class="m-fixed m-right-bottom m-padded-fixed" style="display: none">
+        <div class="ui vertical icon buttons">
+            <button type="button" class="ui toc-button blue button">目录</button>
+            <a href="#comment" class="ui blue button">留言</a>
+            <button class="ui wechat icon button"><i class="weixin icon"></i></button>
+            <div id="toTop-button" class="ui icon button"><i class="hand point up outline icon"></i></div>
+        </div>
+    </div>
+    <div id="qrcode" class="ui wechat-imge flowing popup transition hidden m-padded-normal" style="width: 130px
+    !important;">
+        <!--<img src="static/images/微信.jpg" class="ui rounded image">-->
+    </div>
+    <div class="ui toc-container flowing popup transition hidden" style="width: 250px">
+        <ol class="js-toc" style="padding-left: 0 !important;">
+        </ol>
+    </div>
 
+    <br>
+    <br>
+    <br>
     <div class="ui section divider"></div>
     <!--底部-->
     <footer class="ui vertical segment m-padded-tb-massive">
@@ -749,6 +771,15 @@ h5,h6{font-size:1em;}
         </div>
     </footer>
 
+
+<!--滚动检测引入-->
+<script src="static/lib/waypoints/jquery.waypoints.min.js"></script>
+<!--平滑滚动cdn-->
+<script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
+<!--二维码生成插件-->
+<script src="static/lib/qrcode/qrcode.min.js"></script>
+<!--tocbot目录生成插件js-->
+<script src="static/lib/tocbot/tocbot.min.js"></script>
 <!--prism代码高亮的js-->
 <script src="static/lib/prism/prism.js"></script>
 <!--<script src="static/js/jquery-3.2.1.js"></script>
@@ -757,11 +788,58 @@ h5,h6{font-size:1em;}
         $('.menu.toggle').click(function () {
             $('.m-item').toggleClass('m-mobile-hide');
         });
-
+        /*赞赏*/
         $('.payButton').popup({
             popup : $('.payShang.popup'),
             on : 'click',
             position : 'bottom center'
+        });
+        /*目录生成初始化*/
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.js-toc-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+        /*目录按钮*/
+        $('.toc-button').popup({
+            popup : $('.toc-container.popup'),
+            on : 'click',
+            position : 'top center'
+        })
+        /*wechat按钮*/
+        $('.wechat').popup({
+            popup : $('.wechat-imge'),
+            on : 'click',
+            position : 'left center'
+        });
+        /*二维码生成*/
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "http://jindo.dev.naver.com/collie",
+            width: 128,
+            height: 128,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        /*平滑滚动*/
+        $('#toTop-button').click(function () {
+            $(window).scrollTo(0,500);
+        });
+        /*滚动检测js*/
+        var waypoint = new Waypoint({
+            element: document.getElementById('waypoint'),
+            handler: function(direction) {
+                if(direction === 'down'){
+                    $('#right-bottom-toolbar').show(500);/*jquery方法*/
+                }else{
+                    $('#right-bottom-toolbar').hide(500);
+                }
+            }
         })
     </script>
 <!--<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>-->

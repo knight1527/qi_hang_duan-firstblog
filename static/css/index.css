@@ -26,6 +26,10 @@ body {
 .m-padded-mini{
     padding: 0.2em !important;
 }
+.m-padded-fixed{
+    padding: 1em !important;
+    padding-bottom: 2em !important;
+}
 .m-padded-normal{
     padding: 1em !important;
 }
@@ -126,7 +130,15 @@ body {
 .m-mobile-show{
     display: none !important;
 }
-
+/*-----position------*/
+.m-fixed{
+    position: fixed !important;
+    z-index: 1 !important;
+}
+.m-right-bottom{
+    bottom: 0 !important;
+    right: 0 !important;
+}
 
 @media screen and (max-width: 768px){
     .m-mobile-hide{
