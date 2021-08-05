@@ -3,6 +3,7 @@ package com.firstblog_admin.web;
 import com.firstblog_admin.NotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @author knight1527
@@ -16,10 +17,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
     @GetMapping("/")
     public String index(){
-        String blog = null;
+        /*String blog = null;
         if(blog == null){
             throw new NotFoundException("Blog Not Found");
-        }
+        }*/
+
         return "index";
     }
 }

@@ -2,9 +2,416 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/semantic.min.css">
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">-->
 </head>
-<body>
-  <h1>首页</h1>
+<body class="m-text-style">
+<script src="../static/js/jquery-3.2.1.js"></script>
+<script src="../static/js/semantic.min.js"></script>
+    <!--导航-->
+    <nav class="ui segment m-padded-tb-mini m-margin-none">
+        <div class="ui container">
+            <div class="ui stackable secondary menu">
+                <img class="ui image item m-padded-tb-mini" src="../static/images/logo3.png" width="190" height="65">
+                <a href="#" class="active m-item item m-mobile-hide"><i class="small home icon m-opacity-mini"></i>首页</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small idea icon m-opacity-mini"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small tags icon m-opacity-mini"></i>标签</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small clone icon m-opacity-mini"></i>归档</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small info icon m-opacity-mini"></i>关于我</a>
+                <div class="m-item right item m-mobile-hide">
+                    <div class="ui transparent input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle basic icon button m-location-top-right m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--中间内容-->
+    <div class="m-padded-tb-large">
+        <div class="ui container">
+            <div class="ui stackable grid">
+                <!--left-->
+                <div class="eleven wide column">
+                    <!--header-->
+                    <div class="ui attached segment">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <div class="ui blue header">Blog</div>
+                            </div>
+                            <div class="right aligned column">
+                                共<h3 class="ui blue header m-inline-block m-text-thin"> 76 </h3>篇
+                            </div>
+                        </div>
+                    </div>
+                    <!--content-->
+                    <div class="ui attached segment m-padded-big">
+                        <div class="ui vertical segment m-padded-big m-padded-tb-big2 m-mobile-lr-clear">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header"><a href="#" target="_blank">Article Title</a></h3>
+                                    <p class="m-text">人类文明的发展要经历挫折，物质文明和汉语文明均是如此。我们还是中华民族兴旺发达的需要。所以，我们要恢复汉语昔日的光彩，提高自身文化的根基，使汉语重回民族文化的殿堂。</p>
+                                    <div class="ui stackable grid">
+                                        <div class="row">
+                                            <div class="eleven wide column">
+                                                <div class="ui mini horizontal link list">
+                                                    <div class="item">
+                                                        <img src="https://unsplash.it/800/450?image=1005"
+                                                             class="ui avatar image">
+                                                        <div class="content"><a href="#" class="header m-text-thin">段启航</a></div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="clock outline icon"></i>2021-7-15
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="meh outline icon"></i>2
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right aligned five wide column">
+                                                <a href="#" target="_blank"
+                                                   class="ui mini blue basic label m-padded-mini m-text-thin">分类</a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="ui container">
+                                                <i class="tags mini icon m-opacity-mini"></i>
+                                                <a href="#" target="_blank"
+                                                   class="ui label m-margin-tb-tiny m-padded-mini">
+                                                    JAVA
+                                                </a>
+                                                <a href="#" target="_blank"
+                                                   class="ui label m-margin-tb-tiny m-padded-mini">
+                                                    JAVA
+                                                </a>
+                                                <a href="#" target="_blank"
+                                                   class="ui label m-margin-tb-tiny m-padded-mini">
+                                                    JAVA
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank">
+                                        <img src="https://unsplash.it/800/450?image=1005" class="ui rounder image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui vertical segment m-padded-big m-padded-tb-big2 m-mobile-lr-clear">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header"><a href="#" target="_blank">Article Title</a></h3>
+                                    <p class="m-text">人类文明的发展要经历挫折，物质文明和汉语文明均是如此。我们还是中华民族兴旺发达的需要。所以，我们要恢复汉语昔日的光彩，提高自身文化的根基，使汉语重回民族文化的殿堂。</p>
+                                    <div class="ui stackable grid">
+                                        <div class="row">
+                                            <div class="eleven wide column">
+                                                <div class="ui mini horizontal link list">
+                                                    <div class="item">
+                                                        <img src="https://unsplash.it/800/450?image=1005"
+                                                             class="ui avatar image">
+                                                        <div class="content"><a href="#" class="header m-text-thin">段启航</a></div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="clock outline icon"></i>2021-7-15
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="meh outline icon"></i>2
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right aligned five wide column">
+                                                <a href="#" target="_blank"
+                                                   class="ui mini blue basic label m-padded-mini m-text-thin">分类</a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="ui container">
+                                                <i class="tags mini icon m-opacity-mini"></i>
+                                                <a href="#" target="_blank"
+                                                   class="ui label m-margin-tb-tiny m-padded-mini">
+                                                    JAVA
+                                                </a>
+                                                <a href="#" target="_blank"
+                                                   class="ui label m-margin-tb-tiny m-padded-mini">
+                                                    JAVA
+                                                </a>
+                                                <a href="#" target="_blank"
+                                                   class="ui label m-margin-tb-tiny m-padded-mini">
+                                                    JAVA
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank">
+                                        <img src="https://unsplash.it/800/450?image=1005" class="ui rounder image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui vertical segment m-padded-big m-padded-tb-big2 m-mobile-lr-clear">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header"><a href="#" target="_blank">Article Title</a></h3>
+                                    <p class="m-text">人类文明的发展要经历挫折，物质文明和汉语文明均是如此。我们还是中华民族兴旺发达的需要。所以，我们要恢复汉语昔日的光彩，提高自身文化的根基，使汉语重回民族文化的殿堂。</p>
+                                    <div class="ui stackable grid">
+                                        <div class="row">
+                                            <div class="eleven wide column">
+                                                <div class="ui mini horizontal link list">
+                                                    <div class="item">
+                                                        <img src="https://unsplash.it/800/450?image=1005"
+                                                             class="ui avatar image">
+                                                        <div class="content"><a href="#" class="header m-text-thin">段启航</a></div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="clock outline icon"></i>2021-7-15
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="meh outline icon"></i>2
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right aligned five wide column">
+                                                <a href="#" target="_blank"
+                                                   class="ui mini blue basic label m-padded-mini m-text-thin">分类</a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="ui container">
+                                                <i class="tags mini icon m-opacity-mini"></i>
+                                                <a href="#" target="_blank"
+                                                   class="ui label m-margin-tb-tiny m-padded-mini">
+                                                    JAVA
+                                                </a>
+                                                <a href="#" target="_blank"
+                                                   class="ui label m-margin-tb-tiny m-padded-mini">
+                                                    JAVA
+                                                </a>
+                                                <a href="#" target="_blank"
+                                                   class="ui label m-margin-tb-tiny m-padded-mini">
+                                                    JAVA
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank">
+                                        <img src="https://unsplash.it/800/450?image=1005" class="ui rounder image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--footer-->
+                    <div class="m-padded-tb-normal">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <div class="fluid ui primary basic animated button" tabindex="0">
+                                    <div class="visible content">上一页</div>
+                                    <div class="hidden content">
+                                        <i class="angle double left icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="fluid ui primary basic animated button" tabindex="0">
+                                    <div class="visible content">下一页</div>
+                                    <div class="hidden content">
+                                        <i class="angle double right icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--right-->
+                <div class="five wide column">
+                    <!--分类-->
+                    <div class="ui segments">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="idea icon"></i>分类
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" target="_blank">more<i class="angle double right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui grey segment">
+                            <div class="ui fluid vertical menu">
+                                <a href="#" target="_blank" class="item">
+                                    算法
+                                    <div class="ui blue left pointing label">12</div>
+                                </a>
+                                <a href="#" target="_blank" class="item">
+                                    算法
+                                    <div class="ui blue left pointing label">12</div>
+                                </a>
+                                <a href="#" target="_blank" class="item">
+                                    算法
+                                    <div class="ui blue left pointing label">12</div>
+                                </a>
+                                <a href="#" target="_blank" class="item">
+                                    算法
+                                    <div class="ui blue left pointing label">12</div>
+                                </a>
+                                <a href="#" target="_blank" class="item">
+                                    算法
+                                    <div class="ui blue left pointing label">12</div>
+                                </a>
+                                <a href="#" target="_blank" class="item">
+                                    算法
+                                    <div class="ui blue left pointing label">12</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--标签-->
+                    <div class="ui segments m-margin-top-large">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="tags icon"></i>标签
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" target="_blank">more<i class="angle double right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui grey segment">
+                            <a href="#" target="_blank" class="ui blue label m-margin-tb-tiny">
+                                JAVA <div class="detail">15</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue label m-margin-tb-tiny">
+                                计算机网络<div class="detail">15</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue label m-margin-tb-tiny">
+                                算法<div class="detail">15</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue label m-margin-tb-tiny">
+                                图论 <div class="detail">15</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue label m-margin-tb-tiny">
+                                数据结构 <div class="detail">15</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue label m-margin-tb-tiny">
+                                HTTP<div class="detail">15</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--最新推荐-->
+                    <div class="ui segments m-margin-top-large">
+                        <div class="ui secondary segment">
+                            <i class="bookmark icon"></i>最新推荐
+                        </div>
+                        <div class="ui  segment">
+                           <a href="#" target="_blank" class="m-text-thin">
+                               推荐文章
+                               <div class="mini detail" style="margin-top: 0.5em">
+                                   <i class="calendar icon"></i>
+                                   2021 -07-15
+                               </div>
+                           </a>
+                        </div>
+                        <div class="ui  segment">
+                            <a href="#" target="_blank" class="m-text-thin">
+                                推荐文章
+                                <div class="mini detail" style="margin-top: 0.5em">
+                                    <i class="calendar icon"></i>
+                                    2021 -07-15
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ui  segment">
+                            <a href="#" target="_blank" class="m-text-thin">
+                                推荐文章
+                                <div class="mini detail" style="margin-top: 0.5em">
+                                    <i class="calendar icon"></i>
+                                    2021 -07-15
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ui  segment">
+                            <a href="#" target="_blank" class="m-text-thin">
+                                推荐文章
+                                <div class="mini detail" style="margin-top: 0.5em">
+                                    <i class="calendar icon"></i>
+                                    2021 -07-15
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--卡片-->
+                    <div class="ui mini horizontal divider header m-text-thin m-text-style">扫码关注我</div>
+                    <div class="ui centered card" style="width: 15em">
+                        <img src="../static/images/3597eea8525240e5a5f973801c0f2118.jpg" alt="" class="ui rounded image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui section divider"></div>
+    <!--底部-->
+    <footer class="ui vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui divided stackable grid">
+                <div class="three wide column center aligned">
+                    <div class="ui link list">
+                        <div class="item">
+                            <img src="../static/images/doge2.jpg" class="ui rounded image" style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui header m-text-spaced m-text-lined">创意Blog</h4>
+                    <div class="ui link list">
+                        <a href="#" class="item">orange</a>
+                        <a href="#" class="item">orange</a>
+                        <a href="#" class="item">orange</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui header m-text-spaced m-text-lined">联系我</h4>
+                    <div class="ui link list">
+                        <a href="#" class="item">QQ:1518607977</a>
+                        <a href="#" class="item">WeChat:17365560507</a>
+                        <a href="#" class="item">Email:1518607977@qq.com</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui header m-text-spaced m-text-lined">I WANNA SAY</h4>
+                    <p class="m-text-spaced m-text-lined m-text-thin">开拓视野，冲破艰险，看见世界，身临其境，贴近彼此，感受生活，这就是生活的目的！</p>
+                </div>
+            </div>
+            <div class="ui section divider"></div>
+            <p class="m-text-spaced m-text-lined m-text-thin m-opacity-tiny">CopyRight © 2021 启航Blog Designed by
+                QiHangDuan_SUSE en
+                Rider</p>
+        </div>
+    </footer>
+
+<!--<script src="static/js/jquery-3.2.1.js"></script>
+<script src="static/js/semantic.min.js"></script>-->
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+    </script>
+<!--<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>-->
 </body>
 </html>
