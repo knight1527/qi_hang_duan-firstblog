@@ -1,9 +1,7 @@
 package com.firstblog_admin.web;
 
-import com.firstblog_admin.NotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @author knight1527
@@ -23,5 +21,33 @@ public class IndexController {
         }*/
 
         return "index";
+    }
+    @GetMapping("/blog")
+    public String blog(){
+        return "blog";
+    }
+    @GetMapping("/aboutMe")
+    public String aboutMe(){
+        return "aboutMe";
+    }
+    @GetMapping("/archives")
+    public String archives(){
+        return "archives";
+    }
+    @GetMapping("/tags")
+    public String tags(){
+        return "tags";
+    }
+    @GetMapping("/types")
+    public String types(){
+        return "types";
+    }
+    @GetMapping("/blogs")
+    public String blogs(){
+        return "admin/blogs";
+    }
+    @GetMapping("/blogs-input")
+    public String blogs_input(){
+        return "../debugHtml/blogs-input";
     }
 }

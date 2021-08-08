@@ -108,18 +108,12 @@
 
                             this.hide().lockScreen(false).hideMask();
 
-                            //删除对话框
-                            this.remove();
-
                             return false;
                         }],
 
                         cancel : [lang.buttons.cancel, function() {
                             this.hide().lockScreen(false).hideMask();
 
-                            //删除对话框
-                            this.remove();
-                            
                             return false;
                         }]
                     }
@@ -135,19 +129,19 @@
 
 				fileInput.bind("change", function() {
 					var fileName  = fileInput.val();
-					var isImage   = new RegExp("(\\.(" + settings.imageFormats.join("|") + "))$", "i"); // /(\.(webp|jpg|jpeg|gif|bmp|png))$/
+					var isImage   = new RegExp("(\\.(" + settings.imageFormats.join("|") + "))$"); // /(\.(webp|jpg|jpeg|gif|bmp|png))$/
 
 					if (fileName === "")
 					{
 						alert(imageLang.uploadFileEmpty);
-
+                        
                         return false;
 					}
-
+					
                     if (!isImage.test(fileName))
 					{
 						alert(imageLang.formatNotAllowed + settings.imageFormats.join(", "));
-
+                        
                         return false;
 					}
 
@@ -158,7 +152,7 @@
                         var uploadIframe = document.getElementById(iframeName);
 
                         uploadIframe.onload = function() {
-
+                            
                             loading(false);
 
                             var body = (uploadIframe.contentWindow ? uploadIframe.contentWindow : uploadIframe.contentDocument).document.body;
@@ -166,16 +160,13 @@
 
                             json = (typeof JSON.parse !== "undefined") ? JSON.parse(json) : eval("(" + json + ")");
 
-                            if(!settings.crossDomainUpload)
+                            if (json.success === 1)
                             {
-                              if (json.success === 1)
-                              {
-                                  dialog.find("[data-url]").val(json.url);
-                              }
-                              else
-                              {
-                                  alert(json.message);
-                              }
+                                dialog.find("[data-url]").val(json.url);
+                            }
+                            else
+                            {
+                                alert(json.message);
                             }
 
                             return false;

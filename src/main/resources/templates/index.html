@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!--将整个title作为一个参数传给——fragments-->
+<head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首页</title>
+    <title>新的首页</title>
     <link rel="stylesheet" type="text/css" href="../static/css/index.css">
     <link rel="stylesheet" type="text/css" href="../static/css/semantic.min.css">
    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">-->
 </head>
 <body class="m-text-style">
-<script src="../static/js/jquery-3.2.1.js"></script>
-<script src="../static/js/semantic.min.js"></script>
+<!--<script src="../static/js/jquery-3.2.1.js" th:src="@{/js/jquery-3.2.1.js}"></script>
+<script src="../static/js/semantic.min.js" th:src="@{/js/semantic.min.js}"></script>-->
     <!--导航-->
     <nav class="ui segment m-padded-tb-mini m-margin-none">
         <div class="ui container">
             <div class="ui stackable secondary menu">
-                <img class="ui image item m-padded-tb-mini" src="../static/images/logo3.png" width="190" height="65">
+                <img class="ui image item m-padded-tb-mini" src="../static/images/logo3.png" th:src="@{/images/logo3.png}" width="190"
+                     height="65">
                 <a href="#" class="active m-item item m-mobile-hide"><i class="small home icon m-opacity-mini"></i>首页</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="small idea icon m-opacity-mini"></i>分类</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="small tags icon m-opacity-mini"></i>标签</a>
@@ -359,7 +361,8 @@
                     <!--卡片-->
                     <div class="ui mini horizontal divider header m-text-thin m-text-style">扫码关注我</div>
                     <div class="ui centered card" style="width: 15em">
-                        <img src="../static/images/3597eea8525240e5a5f973801c0f2118.jpg" alt="" class="ui rounded image">
+                        <img src="../static/images/3597eea8525240e5a5f973801c0f2118.jpg" th:src="@{/images/3597eea8525240e5a5f973801c0f2118.jpg}" alt=""
+                             class="ui rounded image">
                     </div>
                 </div>
             </div>
@@ -373,7 +376,8 @@
                 <div class="three wide column center aligned">
                     <div class="ui link list">
                         <div class="item">
-                            <img src="../static/images/doge2.jpg" class="ui rounded image" style="width: 110px;">
+                            <img src="../static/images/doge2.jpg" th:src="@{/images/doge2.jpg}" class="ui rounded image" style="width:
+                            110px;">
                         </div>
                     </div>
                 </div>
@@ -405,6 +409,10 @@
         </div>
     </footer>
 
+    <th:block th:replace="_fragments :: script">
+        <script src="../static/js/jquery-3.2.1.js"></script>
+        <script src="../static/js/semantic.min.js"></script>
+    </th:block>
 <!--<script src="static/js/jquery-3.2.1.js"></script>
 <script src="static/js/semantic.min.js"></script>-->
     <script>
