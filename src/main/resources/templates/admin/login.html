@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head th:replace="_temp :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台登录</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/semantic.min.css">
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">-->
+</head>
+<body class="m-text-style">
+
+<div class="m-container-width-small m-padded-tb-large" style="max-width: 30em !important;">
+    <div class="ur container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="column">
+            <h2 class="ui center aligned teal header">
+                <div class="content">
+                    Log-in to backstage
+                </div>
+            </h2>
+            <form class="ui large form" method="post" action="#" th:action="@{/admin/login}">
+                <div class="ui stacked segment">
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="username" placeholder="用户名">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" name="password" placeholder="密码">
+                        </div>
+                    </div>
+                    <button class="ui fluid large teal submit button">登   录</button>
+                </div>
+
+                <div class="ui error message"></div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+    <script src="../../static/js/jquery-3.2.1.js"></script>
+    <script src="../../static/js/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+</body>
+</html>

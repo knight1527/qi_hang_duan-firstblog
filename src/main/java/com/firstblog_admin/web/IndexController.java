@@ -48,6 +48,14 @@ public class IndexController {
     }
     @GetMapping("/blogs-input")
     public String blogs_input(){
-        return "../debugHtml/blogs-input";
+        return "admin/blogs-input";
+    }
+    @GetMapping("/back_index")
+    public String back_index(){
+        return "admin/index";
+    }
+    @GetMapping("/login")
+    public String login(){
+        return "admin/login";
     }
 }
