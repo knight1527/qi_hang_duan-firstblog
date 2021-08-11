@@ -50,7 +50,7 @@ public class LoginController {
     }
 
 
-    @GetMapping("/out")
+    @GetMapping("/logout")
     public String logout(HttpSession session){
         session.removeAttribute("user");
         return "redirect:/admin";

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/html">
 <head th:replace="_temp :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,6 +41,10 @@
 
                 <div class="ui error message"></div>
 
+                <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">
+                    用户名或密码错误
+                </div>
+
             </form>
 
         </div>
@@ -53,5 +57,28 @@
     <script src="../../static/js/jquery-3.2.1.js"></script>
     <script src="../../static/js/semantic.min.js"></script>
 <!--/*/</th:block>/*/-->
+<script>
+    /*表单非空验证*/
+    $('.ui.form').form({
+        fields : {
+            username : {
+                identifier: 'username',
+                rules: [{
+                    type : 'empty',
+                    prompt : '请输入username！'
+                }]
+            },
+            password : {
+                identifier  : 'password',
+                rules: [
+                    {
+                        type   : 'empty',
+                        prompt : '请输入password！'
+                    }
+                ],
+            },
+        }
+    });
+</script>
 </body>
 </html>
