@@ -29,8 +29,9 @@
     <div class="ui container">
         <div class="ui stackable secondary menu">
             <h2 class="ui blue header item">博客管理</h2>
-            <a href="#" class="active m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="small home icon m-opacity-mini"></i>博客</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="small home icon m-opacity-mini"></i>博客</a>
+            <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide"
+               th:classappend="${n==2} ? 'active'"><i
                     class="small idea icon m-opacity-mini"></i>分类</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i
                     class="small tags icon m-opacity-mini"></i>标签</a>
