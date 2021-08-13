@@ -43,8 +43,8 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" class="item">发布</a>
-                <a href="#" class="blue active item">列表</a>
+                <a href="#" th:href="@{/admin/types/input}" class="item">发布</a>
+                <a href="#" th:href="@{/admin/types}" class="blue active item">列表</a>
             </div>
         </div>
     </div>
@@ -54,6 +54,11 @@
     <!--中间内容-->
     <div class="m-container-width-small m-padded-tb-large">
         <div class="ui container">
+            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                <i class="close icon"></i>
+                <div class="header">提示</div>
+                <p th:text="${message}">操作成功</p>
+            </div>
 
             <table class="ui celled table">
                 <thead class="m-text-thin">
@@ -154,6 +159,12 @@
 
         $('.ui.dropdown').dropdown({
             transition: 'drop'
+        });
+        /*提示消息关闭*/
+        $('.message .close').on('click',function()  {
+            $(this)
+                .closest('.message')
+                .transition('fade');
         });
     </script>
 <!--<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>-->
