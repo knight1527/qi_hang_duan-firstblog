@@ -39,8 +39,9 @@
             <div class="right m-item m-mobile-hide menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
-                        Rider
+                        <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image"
+                             th:src="@{${session.user.avator}}">
+                        <span th:text="${session.user.nickname}">Rider</span>
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">

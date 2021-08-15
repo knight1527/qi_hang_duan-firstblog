@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/html">
 <head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,6 +55,7 @@
     <div class="m-container-width-small m-padded-tb-large">
         <div class="ui container">
             <form action="#" method="post" class="ui form">
+                <input type="hidden" name="page">
                 <div class="inline fields">
                     <div class="field" style="width: 40%">
                         <div class="fluid">
@@ -95,45 +96,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="center aligned">1</td>
-                        <td class="center aligned">浅谈Java集合</td>
-                        <td class="center aligned">JavaSE</td>
-                        <td class="center aligned">是</td>
-                        <td class="center aligned">2021-7-26</td>
+                    <tr th:each="blog,iterSTat : ${page.content}">
+                        <td th:text="${iterSTat.count}" class="center aligned">1</td>
+                        <td th:text="${blog.title}" class="center aligned">浅谈Java集合</td>
+                        <td th:text="${blog.type.name}" class="center aligned">JavaSE</td>
+                        <td th:text="${blog.recommend} ? '是' : '否' " class="center aligned">是</td>
+                        <td th:text="${blog.updateTime}" class="center aligned">2021-7-26</td>
                         <td class="center aligned">
-                            <a href="#" class="ui mini blue button m-text-thin">编辑</a>
-                            <a href="#" class="ui mini orange button m-text-thin">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="center aligned">1</td>
-                        <td class="center aligned">浅谈Java集合</td>
-                        <td class="center aligned">JavaSE</td>
-                        <td class="center aligned">是</td>
-                        <td class="center aligned">2021-7-26</td>
-                        <td class="center aligned">
-                            <a href="#" class="ui mini blue button m-text-thin">编辑</a>
-                            <a href="#" class="ui mini orange button m-text-thin">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="center aligned">1</td>
-                        <td class="center aligned">浅谈Java集合</td>
-                        <td class="center aligned">JavaSE</td>
-                        <td class="center aligned">是</td>
-                        <td class="center aligned">2021-7-26</td>
-                        <td class="center aligned">
-                            <a href="#" class="ui mini blue button m-text-thin">编辑</a>
-                            <a href="#" class="ui mini orange button m-text-thin">删除</a>
+                            <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}"
+                               class="ui mini blue button m-text-thin">编辑</a>
+                            <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}"
+                               class="ui mini orange button m-text-thin">删除</a>
                         </td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <th colspan="5">
-                            <a href="#" class="ui mini button">上一页</a>
-                            <a href="#" class="ui mini button">下一页</a>
+                            <a onclick="page(this)" th:attr="data-page=${page.number}-1)" class="ui mini button"
+                               th:unless="${page.first}">上一页</a>
+                            <a onclick="page(this)" th:attr="data-page=${page.number}+1)" class="ui mini button"
+                               th:unless="${page.last}">下一页</a>
                         </th>
                         <th class="center aligned">
                             <a href="#" class="ui m-text-thin mini blue button">新增</a>
@@ -207,6 +190,11 @@
         $('.ui.dropdown').dropdown({
             transition: 'drop'
         });
+
+        /*上下翻页*/
+        function page(obj){
+            $("[name='page']").val($(obj).data("page"));
+        }
     </script>
 <!--<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>-->
 </body>
