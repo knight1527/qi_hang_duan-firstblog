@@ -1,6 +1,7 @@
 package com.firstblog_admin.service;
 
 import com.firstblog_admin.pojo.Blog;
+import com.firstblog_admin.vo.BlogQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -15,7 +16,7 @@ import org.springframework.data.domain.Pageable;
 public interface BlogService {
     Blog getBlog(Long id);
 
-    Page<Blog> listBlog(Pageable pageable,Blog blog);
+    Page<Blog> listBlog(Pageable pageable, BlogQuery blog);
 
     Blog saveBlog(Blog blog);
 

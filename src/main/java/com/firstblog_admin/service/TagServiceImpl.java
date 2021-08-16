@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * @author knight1527
  * Created with IntelliJ IDEA.
@@ -34,6 +36,12 @@ public class TagServiceImpl implements TagService{
     public Tag getTag(Long id) {
         //typeRepository.findById(id).get()提示为null好像会抛出异常
         return tagRepository.findById(id).orElse(null);
+    }
+
+    @Transactional
+    @Override
+    public List<Tag> listTag() {
+        return tagRepository.findAll();
     }
 
     @Transactional

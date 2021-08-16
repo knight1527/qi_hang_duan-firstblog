@@ -8,14 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title th:replace="${title}">首页</title>
-    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
-    <!--上引入tocbot目录生成插件（注：所有标题标签必须要有id才能识别）-->
-    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
-    <!--上引入prism的css-->
     <link rel="stylesheet" href="../static/css/animate.min.css" th:href="@{/css/animate.min.css}">
     <!--上引入animate动画css-->
-    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
-    <!--上引入typo排版css-->
     <link rel="stylesheet" type="text/css" href="../static/css/index.css" th:href="@{/css/index.css}">
     <link rel="stylesheet" type="text/css" href="../static/css/semantic.min.css" th:href="@{/css/semantic.min.css}">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">-->
@@ -29,7 +23,9 @@
     <div class="ui container">
         <div class="ui stackable secondary menu">
             <h2 class="ui blue header item">博客管理</h2>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="small home icon m-opacity-mini"></i>博客</a>
+            <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide"
+               th:classappend="${n==1} ? 'active'"><i
+                    class="small home icon m-opacity-mini"></i>博客</a>
             <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide"
                th:classappend="${n==2} ? 'active'"><i
                     class="small idea icon m-opacity-mini"></i>分类</a>

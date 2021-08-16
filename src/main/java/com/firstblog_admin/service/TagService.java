@@ -4,6 +4,8 @@ import com.firstblog_admin.pojo.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 /**
  * @author knight1527
  * Created with IntelliJ IDEA.
@@ -19,6 +21,8 @@ public interface TagService {
     Tag getTag(Long id);
 
     Tag getTagByName(String name);
+
+    List<Tag> listTag();
 
     Page<Tag> listTag(Pageable pageable);
 
