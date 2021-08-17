@@ -71,7 +71,7 @@
 
                 <div class="required field">
                     <div id="md-content" style="z-index: 1 !important;">
-                        <textarea placeholder="博客内容" style="display: none;"></textarea>
+                        <textarea placeholder="博客内容" name="content" style="display: none;"></textarea>
                     </div>
                 </div>
 
@@ -101,7 +101,6 @@
                                     <div th:each="tag : ${tags}" class="item" data-value="Java"
                                          th:data-value="${tag.id}" th:text="${tag.name}">Java
                                     </div>
-                                    <div class="item" data-value="算法">算法</div>
                                 </div>
                             </div>
                         </div>

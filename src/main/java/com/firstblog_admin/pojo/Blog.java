@@ -22,6 +22,9 @@ public class Blog {
     private Long id;
 
     private String title;
+    /*博客内容LongText类型*/
+    @Basic(fetch = FetchType.LAZY)
+    @Lob
     private String content;
     private String firstPicture;
     private String flag;
@@ -47,6 +50,10 @@ public class Blog {
 
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments = new ArrayList<>();
+
+    /*不保存到数据库*/
+    @Transient
+    private String tagIds;
 
     public Blog() {
     }
@@ -185,6 +192,14 @@ public class Blog {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
     }
 
     @Override

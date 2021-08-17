@@ -64,17 +64,20 @@
                         </div>
                     </div>
                     <div class="field" style="width: 35%">
-                        <div class="ui fluid multiple search normal selection dropdown">
-                            <input type="hidden" name="typeId">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">选择分类</div>
-                            <div class="menu">
-                                <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">
-                                    错误日志</div>
-                                <!--/*-->
-                                <div class="item" data-value="2">开发者手册</div>
-                                <!--*/-->
+                        <div class="ui labeled fluid action input">
+                            <div class="ui type fluid selection dropdown">
+                                <input type="hidden" name="typeId">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">选择分类</div>
+                                <div class="menu">
+                                    <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">
+                                        错误日志</div>
+                                    <!--/*-->
+                                    <div class="item" data-value="2">开发者手册</div>
+                                    <!--*/-->
+                                </div>
                             </div>
+                            <button class="ui compact button" id="clear">clear</button>
                         </div>
                     </div>
                     <div class="field" style="width: 10%">
@@ -97,6 +100,7 @@
                         <th class="center aligned">标题</th>
                         <th class="center aligned">类型</th>
                         <th class="center aligned">推荐</th>
+                        <th class="center aligned">状态</th>
                         <th class="center aligned">更新时间</th>
                         <th class="center aligned">操作</th>
                     </tr>
@@ -107,6 +111,7 @@
                         <td th:text="${blog.title}" class="center aligned">浅谈Java集合</td>
                         <td th:text="${blog.type.name}" class="center aligned">JavaSE</td>
                         <td th:text="${blog.recommend} ? '是' : '否' " class="center aligned">是</td>
+                        <td th:text="${blog.published} ? '发布' : '草稿' " class="center aligned">草稿</td>
                         <td th:text="${blog.updatedDate}" class="center aligned">2021-7-26</td>
                         <td class="center aligned">
                             <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}"
@@ -118,11 +123,13 @@
                     </tbody>
                     <tfoot>
                     <tr>
-                        <th colspan="5">
-                            <a onclick="page(this)" th:attr="data-page=${page.number}-1)" class="ui mini button"
-                               th:unless="${page.first}">上一页</a>
-                            <a onclick="page(this)" th:attr="data-page=${page.number}+1)" class="ui mini button"
-                               th:unless="${page.last}">下一页</a>
+                        <th colspan="6">
+                            <div th:if="${page.totalPages}>1" >
+                                <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="ui mini button"
+                                   th:unless="${page.first}">上一页</a>
+                                <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="ui mini button"
+                                   th:unless="${page.last}">下一页</a>
+                            </div>
                         </th>
                         <th class="center aligned">
                             <a href="#" th:href="@{/admin/blogs/input}" class="ui m-text-thin mini blue button">新增</a>
@@ -132,7 +139,7 @@
                 </table>
                 <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
                     <i class="close icon"></i>
-                    <div class="header">提示</div>
+                    <div class="header">提示:</div>
                     <p th:text="${message}">操作成功</p>
                 </div>
             </div>
@@ -209,6 +216,13 @@
                     .closest('.message')
                     .transition('fade');
         });
+        /*清除分类*/
+        $('#clear')
+            .on('click', function() {
+                $('.ui.type.dropdown')
+                    .dropdown('clear')
+                ;
+            });
 
         /*上下翻页*/
         function page(obj) {
