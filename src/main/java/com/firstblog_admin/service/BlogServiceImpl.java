@@ -4,6 +4,7 @@ import com.firstblog_admin.NotFoundException;
 import com.firstblog_admin.dao.BlogRepository;
 import com.firstblog_admin.pojo.Blog;
 import com.firstblog_admin.pojo.Type;
+import com.firstblog_admin.util.MyBeanUtils;
 import com.firstblog_admin.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,9 +68,14 @@ public class BlogServiceImpl implements BlogService{
     @Transactional
     @Override
     public Blog saveBlog(Blog blog) {
-        blog.setCreatedDate(new Date());
-        blog.setUpdatedDate(new Date());
-        blog.setViews(0);//浏览记录
+        if(blog.getId() == null){
+            blog.setCreatedDate(new Date());
+            blog.setUpdatedDate(new Date());
+            blog.setViews(0);//浏览记录
+        }else{
+            blog.setUpdatedDate(new Date());
+        }
+
         return blogRepository.save(blog);
     }
 
@@ -80,7 +86,8 @@ public class BlogServiceImpl implements BlogService{
         if(temp == null){
             throw new NotFoundException("不存在该类型");
         }
-        BeanUtils.copyProperties(blog,temp);
+        BeanUtils.copyProperties(blog,temp, MyBeanUtils.getNullPropertyNames(blog));
+        temp.setUpdatedDate(new Date());
         return blogRepository.save(temp);
     }
 

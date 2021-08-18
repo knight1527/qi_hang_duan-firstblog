@@ -53,7 +53,7 @@ public class TagServiceImpl implements TagService{
 
     private List<Long> convertToList(String ids){
         List<Long> list = new ArrayList<>();
-        if("".equals(ids) && ids!=null){
+        if(!"".equals(ids) && ids!=null){
             String[] idarry = ids.split(",");
             for(int i=0;i < idarry.length;i++){
                 list.add(new Long(idarry[i]));
