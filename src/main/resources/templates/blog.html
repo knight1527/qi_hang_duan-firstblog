@@ -125,86 +125,98 @@
                     </div>
                 </div>
             </div>
-            <div id="comment" class="ui attached segment">
+            <div class="ui attached segment">
                 <!--comments-->
-                <div class="ui blue segment">
-                    <div class="ui threaded comments">
-                        <h3 class="ui dividing header">Comments</h3>
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="../static/images/doge2.jpg" th:src="@{/images/doge2.jpg}">
-                            </a>
-                            <div class="content">
-                                <a class="author">Matt</a>
-                                <div class="metadata">
-                                    <span class="date">Today at 5:42PM</span>
-                                </div>
-                                <div class="text">
-                                    How artistic!
-                                </div>
-                                <div class="actions">
-                                    <a class="reply">Reply</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="../static/images/doge2.jpg" th:src="@{/images/doge2.jpg}">
-                            </a>
-                            <div class="content">
-                                <a class="author">Elliot Fu</a>
-                                <div class="metadata">
-                                    <span class="date">Yesterday at 12:30AM</span>
-                                </div>
-                                <div class="text">
-                                    <p>This has been very useful for my research. Thanks as well!</p>
-                                </div>
-                                <div class="actions">
-                                    <a class="reply">Reply</a>
+                <div id="comment-container"  class="ui blue segment">
+                    <div th:fragment="commentList">
+                        <div class="ui threaded comments" style="max-width: 100%;">
+                            <h3 class="ui dividing header">Comments</h3>
+                            <div class="comment" th:each="comment : ${comments}">
+                                <a class="avatar">
+                                    <img src="../static/images/doge2.jpg" th:src="@{${comment.avator}}">
+                                </a>
+                                <div class="content">
+                                    <a class="author" th:text="${comment.nickname}">Matt</a>
+                                    <div class="metadata">
+                                        <span class="date"
+                                              th:text="${#dates.format(comment.createdDate,'yyyy-MM-dd hh:mm')}">Today
+                                            at
+                                            5:42PM</span>
+                                    </div>
+                                    <div class="text" th:text="${comment.content}">
+                                        How artistic!
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply" data-commentid="1" data-commentnickname="Matt"
+                                           th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickname}"
+                                           onclick="reply(this)">
+                                            Reply</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="comments">
-                                <div class="comment">
-                                    <a class="avatar">
-                                        <img src="../static/images/doge2.jpg" th:src="@{/images/doge2.jpg}">
-                                    </a>
-                                    <div class="content">
-                                        <a class="author">Jenny Hess</a>
-                                        <div class="metadata">
-                                            <span class="date">Just now</span>
-                                        </div>
-                                        <div class="text">
-                                            Elliot you are always so right :)
-                                        </div>
-                                        <div class="actions">
-                                            <a class="reply">Reply</a>
+                            <!--/*-->
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="../static/images/doge2.jpg" th:src="@{/images/doge2.jpg}">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Elliot Fu</a>
+                                    <div class="metadata">
+                                        <span class="date">Yesterday at 12:30AM</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>This has been very useful for my research. Thanks as well!</p>
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                                <div class="comments">
+                                    <div class="comment">
+                                        <a class="avatar">
+                                            <img src="../static/images/doge2.jpg" th:src="@{/images/doge2.jpg}">
+                                        </a>
+                                        <div class="content">
+                                            <a class="author">Jenny Hess</a>
+                                            <div class="metadata">
+                                                <span class="date">Just now</span>
+                                            </div>
+                                            <div class="text">
+                                                Elliot you are always so right :)
+                                            </div>
+                                            <div class="actions">
+                                                <a class="reply">Reply</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="../static/images/doge2.jpg" th:src="@{/images/doge2.jpg}">
-                            </a>
-                            <div class="content">
-                                <a class="author">Joe Henderson</a>
-                                <div class="metadata">
-                                    <span class="date">5 days ago</span>
-                                </div>
-                                <div class="text">
-                                    Dude, this is awesome. Thanks so much
-                                </div>
-                                <div class="actions">
-                                    <a class="reply">Reply</a>
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="../static/images/doge2.jpg" th:src="@{/images/doge2.jpg}">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Joe Henderson</a>
+                                    <div class="metadata">
+                                        <span class="date">5 days ago</span>
+                                    </div>
+                                    <div class="text">
+                                        Dude, this is awesome. Thanks so much
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
                                 </div>
                             </div>
+                            <!--*/-->
                         </div>
                     </div>
                 </div>
-                <div class="ui form">
+                <div id="comment-form" class="ui form">
+                    <input type="hidden" name="blog.id" th:value="${blog.id}">
+                    <input type="hidden" name="parentComment.id" value="-1">
                     <div class="field">
-                        <textarea name="comment" placeholder="请输入评论信息 . . . " cols="30" rows="10"></textarea>
+                        <textarea name="content" placeholder="请输入评论信息 . . . " cols="30" rows="10"></textarea>
                         <div class="fields">
                             <div class="field m-mobile-wide m-margin-tb-small" style="width: 35% !important;">
                                 <div class="ui left icon input">
@@ -219,10 +231,16 @@
                                 </div>
                             </div>
                             <div class="field m-mobile-wide m-margin-tb-small" style="width: 30% !important;">
-                                <button class="ui blue button m-mobile-wide" style="width: 100% !important;">发布</button>
+                                <button id="commentpost-btn" type="button" class="ui blue button m-mobile-wide"
+                                        style="width: 100%
+                                !important;"><i class="edit icon"></i>发布
+                                </button>
                             </div>
                         </div>
                     </div>
+
+                    <div class="ui error message"></div>
+
                 </div>
             </div>
         </div>
@@ -384,6 +402,73 @@
                 }
             }
         })
+        /*表单非空验证*/
+        $('.ui.form').form({
+            fields : {
+                comment : {
+                    identifier: 'content',
+                    rules: [{
+                        type : 'empty',
+                        prompt : '请输入评论信息！'
+                    }]
+                },
+                nickname : {
+                    identifier  : 'nickname',
+                    rules: [
+                        {
+                            type   : 'empty',
+                            prompt : '请输入ID(让我知道你是谁)！'
+                        }
+                    ],
+                },
+                email : {
+                    identifier  : 'email',
+                    rules: [
+                        {
+                            type   : 'empty',
+                            prompt : '请输入邮箱(让我联系的到你)！'
+                        }
+                    ],
+                }
+            }
+        });
+        /*提交方法*/
+        $('#commentpost-btn').click(function (){
+            var boo = $('.ui.form').form('validate form');//显示校验表单
+            if (boo){
+                postData();
+            }else{
+
+            }
+        });
+        /*发送请求方法*/
+        function postData() {
+            $("#comment-container").load(/*[[@{/comments}]]*/"",{
+                "parentComment.id" : $("[name='parentComment.id']").val(),
+                "blog.id" : $("[name='blog.id']").val(),
+                "nickname": $("[name='nickname']").val(),
+                "email"   : $("[name='email']").val(),
+                "content" : $("[name='content']").val()
+            },function (responseTxt, statusTxt, xhr) {
+                $(window).scrollTo($('#comment-container'),500);
+                clearContent();
+            });
+        }
+
+        function clearContent() {
+            $("[name='content']").val('');
+            $("[name='parentComment.id']").val(-1);
+            $("[name='content']").attr("placeholder", "请输入评论信息...");
+        }
+
+        function reply(obj) {
+            var commentId = $(obj).data('commentid');
+            var commentNickname = $(obj).data('commentnickname');
+
+            $("[name='content']").attr("placeholder", "@"+commentNickname).focus();
+            $("[name='parentComment.id']").val(commentId);
+            $(window).scrollTo($('#comment-form'),500);
+        }
     </script>
 <!--<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>-->
 </body>
