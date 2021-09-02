@@ -104,6 +104,13 @@ body {
     margin-bottom: 0.5em !important;
 }
 /*-------Text-------*/
+.m-color-tiffany{
+    color: #81D8D0;
+}
+.m-color-bondiblue{
+    color: #0095B6;
+}
+
 .m-text{
     font-weight: 300 !important;
     letter-spacing: 1px !important;
