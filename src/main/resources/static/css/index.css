@@ -105,10 +105,10 @@ body {
 }
 /*-------Text-------*/
 .m-color-tiffany{
-    color: #81D8D0;
+    color: #81D8D0 !important;
 }
 .m-color-bondiblue{
-    color: #0095B6;
+    color: #0095B6 !important;
 }
 
 .m-text{

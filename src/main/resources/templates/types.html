@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,95 +46,67 @@
                         <div class="ui blue header">分类</div>
                     </div>
                     <div class="right aligned column">
-                        共<h3 class="ui blue header m-inline-block m-text-thin"> 12 </h3>个
+                        共<h3 class="ui blue header m-inline-block m-text-thin" th:text="${#arrays.length(types)}"> 12
+                    </h3>个
                     </div>
                 </div>
             </div>
             <div class="ui attached segment m-padded-tb-large">
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic blue button">随笔</a>
-                    <div class="ui basic blue left pointing label">12</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">思考感悟</a>
-                    <div class="ui basic left pointing label">12</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">思考感悟</a>
-                    <div class="ui basic left pointing label">12</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">思考感悟</a>
-                    <div class="ui basic left pointing label">12</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">思考感悟</a>
-                    <div class="ui basic left pointing label">12</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">思考感悟</a>
-                    <div class="ui basic left pointing label">12</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">思考感悟</a>
-                    <div class="ui basic left pointing label">12</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">思考感悟</a>
-                    <div class="ui basic left pointing label">12</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">思考感悟</a>
-                    <div class="ui basic left pointing label">12</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">思考感悟</a>
-                    <div class="ui basic left pointing label">12</div>
+                <div class="ui labeled button m-margin-tb-tiny" th:each="type : ${types}">
+                    <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="ui basic button"
+                       th:classappend="${type.id==activeTypeId} ? 'blue'"
+                       th:text="${type.name}">随笔</a>
+                    <div class="ui basic left pointing label" th:classappend="${type.id==activeTypeId} ? 'blue'" th:text="${#arrays.length(type.blogs)}">12</div>
                 </div>
             </div>
 
 
             <div class="ui top attached blue segment">
-                <div class="ui vertical segment m-padded-big m-padded-tb-big2 m-mobile-lr-clear">
-                    <div class="ui mobile reversed stackable grid">
+                <div class="ui vertical segment m-padded-big m-padded-tb-big-f m-mobile-lr-clear" th:each="blog : ${page.content}">
+                    <div class="ui middle aligned mobile reversed stackable grid">
                         <div class="eleven wide column">
-                            <h3 class="ui header"><a href="#" target="_blank">Article Title</a></h3>
-                            <p class="m-text">人类文明的发展要经历挫折，物质文明和汉语文明均是如此。我们还是中华民族兴旺发达的需要。所以，我们要恢复汉语昔日的光彩，提高自身文化的根基，使汉语重回民族文化的殿堂。</p>
+                            <h3
+                                    class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
+                                                         th:text="${blog.title}">Article
+                                Title</a></h3>
+                            <p class="m-text" th:text="|${blog.description}......|">
+                                人类文明的发展要经历挫折，物质文明和汉语文明均是如此。我们还是中华民族兴旺发达的需要。所以，我们要恢复汉语昔日的光彩，提高自身文化的根基，使汉语重回民族文化的殿堂。</p>
                             <div class="ui stackable grid">
                                 <div class="row">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
                                                 <img src="https://unsplash.it/800/450?image=1005"
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header m-text-thin">段启航</a></div>
+                                                     class="ui avatar image" th:src="@{${blog.user.avator}}">
+                                                <div class="content"><a href="#" class="header m-text-thin"
+                                                                        th:text="${blog.user.nickname}">段启航
+                                                </a></div>
                                             </div>
                                             <div class="item">
-                                                <i class="clock outline icon"></i>2021-7-15
+                                                <i class="clock outline icon"></i><span
+                                                    th:text="${#dates.format(blog.updatedDate,'yyyy-MM-dd')}">2021-7
+                                                        -15</span>
                                             </div>
                                             <div class="item">
-                                                <i class="meh outline icon"></i>2
+                                                <i class="meh outline icon"></i><span th:text="${blog.views}">2
+                                                    </span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
                                         <a href="#" target="_blank"
-                                           class="ui mini blue basic label m-padded-mini m-text-thin">分类</a>
+                                           class="ui mini blue basic label m-padded-mini m-text-thin"
+                                           th:text="${blog.type.name}">分类</a>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="ui container">
-                                        <i class="tags mini icon m-opacity-mini"></i>
+                                <div class="row" style="padding: 0 !important;">
+                                    <div class="m-padded-tag">
+                                        <i class="tags mini icon m-opacity-mini m-padded-normal"></i>
+                                    </div>
+                                    <div class="m-padded-tag" th:each="tag : ${blog.tags}">
                                         <a href="#" target="_blank"
-                                           class="ui label m-margin-tb-tiny m-padded-mini">
-                                            JAVA
-                                        </a>
-                                        <a href="#" target="_blank"
-                                           class="ui label m-margin-tb-tiny m-padded-mini">
-                                            JAVA
-                                        </a>
-                                        <a href="#" target="_blank"
-                                           class="ui label m-margin-tb-tiny m-padded-mini">
+                                           class="ui label m-margin-tb-tiny m-padded-mini"
+                                           th:text="${tag.name}">
                                             JAVA
                                         </a>
                                     </div>
@@ -142,126 +114,23 @@
                             </div>
                         </div>
                         <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="https://unsplash.it/800/450?image=1005" class="ui rounder image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="ui vertical segment m-padded-big m-padded-tb-big2 m-mobile-lr-clear">
-                    <div class="ui mobile reversed stackable grid">
-                        <div class="eleven wide column">
-                            <h3 class="ui header"><a href="#" target="_blank">Article Title</a></h3>
-                            <p class="m-text">人类文明的发展要经历挫折，物质文明和汉语文明均是如此。我们还是中华民族兴旺发达的需要。所以，我们要恢复汉语昔日的光彩，提高自身文化的根基，使汉语重回民族文化的殿堂。</p>
-                            <div class="ui stackable grid">
-                                <div class="row">
-                                    <div class="eleven wide column">
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://unsplash.it/800/450?image=1005"
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header m-text-thin">段启航</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="clock outline icon"></i>2021-7-15
-                                            </div>
-                                            <div class="item">
-                                                <i class="meh outline icon"></i>2
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui mini blue basic label m-padded-mini m-text-thin">分类</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="ui container">
-                                        <i class="tags mini icon m-opacity-mini"></i>
-                                        <a href="#" target="_blank"
-                                           class="ui label m-margin-tb-tiny m-padded-mini">
-                                            JAVA
-                                        </a>
-                                        <a href="#" target="_blank"
-                                           class="ui label m-margin-tb-tiny m-padded-mini">
-                                            JAVA
-                                        </a>
-                                        <a href="#" target="_blank"
-                                           class="ui label m-margin-tb-tiny m-padded-mini">
-                                            JAVA
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="https://unsplash.it/800/450?image=1005" class="ui rounder image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="ui vertical segment m-padded-big m-padded-tb-big2 m-mobile-lr-clear">
-                    <div class="ui mobile reversed stackable grid">
-                        <div class="eleven wide column">
-                            <h3 class="ui header"><a href="#" target="_blank">Article Title</a></h3>
-                            <p class="m-text">人类文明的发展要经历挫折，物质文明和汉语文明均是如此。我们还是中华民族兴旺发达的需要。所以，我们要恢复汉语昔日的光彩，提高自身文化的根基，使汉语重回民族文化的殿堂。</p>
-                            <div class="ui stackable grid">
-                                <div class="row">
-                                    <div class="eleven wide column">
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://unsplash.it/800/450?image=1005"
-                                                     class="ui avatar image">
-                                                <div class="content"><a href="#" class="header m-text-thin">段启航</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="clock outline icon"></i>2021-7-15
-                                            </div>
-                                            <div class="item">
-                                                <i class="meh outline icon"></i>2
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank"
-                                           class="ui mini blue basic label m-padded-mini m-text-thin">分类</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="ui container">
-                                        <i class="tags mini icon m-opacity-mini"></i>
-                                        <a href="#" target="_blank"
-                                           class="ui label m-margin-tb-tiny m-padded-mini">
-                                            JAVA
-                                        </a>
-                                        <a href="#" target="_blank"
-                                           class="ui label m-margin-tb-tiny m-padded-mini">
-                                            JAVA
-                                        </a>
-                                        <a href="#" target="_blank"
-                                           class="ui label m-margin-tb-tiny m-padded-mini">
-                                            JAVA
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="https://unsplash.it/800/450?image=1005" class="ui rounder image">
+                            <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                                <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}"
+                                     class="ui rounded image">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="ui bottom attached segment">
+            <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
                 <div class="ui middle aligned two column grid">
                     <div class="column">
-                        <a href="#" class="ui tiny blue basic button">上一页</a>
+                        <a href="#" th:href="@{/(page=${page.number}-1)}"  th:unless="${page.first}"
+                           class="ui mini blue basic button">上一页</a>
                     </div>
                     <div class="right aligned column">
-                        <a href="#" class="ui tiny blue basic button">下一页</a>
+                        <a href="#" th:href="@{/(page=${page.number}+1)}"  th:unless="${page.last}"
+                           class="ui mini blue basic button">下一页</a>
                     </div>
                 </div>
             </div>

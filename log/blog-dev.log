@@ -1,96 +1,141 @@
-2021-09-02 20:01:41.794  INFO 16148 --- [restartedMain] c.f.FirstBlogAdminApplication            : Starting FirstBlogAdminApplication using Java 1.8.0_141 on LAPTOP-QHFK85TB with PID 16148 (D:\c桌面\Java工程与笔记\FirstBlog_Admin\target\classes started by knight1527 in D:\c桌面\Java工程与笔记\FirstBlog_Admin)
-2021-09-02 20:01:41.802 DEBUG 16148 --- [restartedMain] c.f.FirstBlogAdminApplication            : Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-09-02 20:01:41.802  INFO 16148 --- [restartedMain] c.f.FirstBlogAdminApplication            : The following profiles are active: dev
-2021-09-02 20:01:41.864  INFO 16148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-09-02 20:01:41.865  INFO 16148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-09-02 20:01:42.611  INFO 16148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-09-02 20:01:42.697  INFO 16148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 5 JPA repository interfaces.
-2021-09-02 20:01:43.533  INFO 16148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-09-02 20:01:43.543  INFO 16148 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-09-02 20:01:43.543  INFO 16148 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-09-02 20:01:43.545  INFO 16148 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
-2021-09-02 20:01:43.546  INFO 16148 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
-2021-09-02 20:01:43.546  INFO 16148 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-2021-09-02 20:01:43.547  INFO 16148 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-09-02 20:01:43.563  INFO 16148 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
-2021-09-02 20:01:43.686  INFO 16148 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-09-02 20:01:43.687  INFO 16148 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1821 ms
-2021-09-02 20:01:43.891  INFO 16148 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-09-02 20:01:43.943  INFO 16148 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-09-02 20:01:44.079  INFO 16148 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-09-02 20:01:44.188  INFO 16148 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-09-02 20:01:44.189  WARN 16148 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2021-09-02 20:01:44.333  INFO 16148 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-09-02 20:01:44.350  INFO 16148 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2021-09-02 20:01:45.155  INFO 16148 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-09-02 20:01:45.164  INFO 16148 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-09-02 20:01:45.923  WARN 16148 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-09-02 20:01:46.390  INFO 16148 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-09-02 20:01:46.904  INFO 16148 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-09-02 20:01:46.939  INFO 16148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-09-02 20:01:46.949  INFO 16148 --- [restartedMain] c.f.FirstBlogAdminApplication            : Started FirstBlogAdminApplication in 5.763 seconds (JVM running for 7.239)
-2021-09-02 20:01:52.373  INFO 16148 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-09-02 20:01:52.373  INFO 16148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-09-02 20:01:52.374  INFO 16148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-09-02 20:01:53.969  INFO 16148 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.index', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}]}
-2021-09-02 20:01:54.102  WARN 16148 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-09-02 20:01:54.116  WARN 16148 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-09-02 20:01:54.121  INFO 16148 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : Result : index
-2021-09-02 20:01:54.121  INFO 16148 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:01:56.799  INFO 16148 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[57, {}]}
-2021-09-02 20:01:56.858  INFO 16148 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : Result : blog
-2021-09-02 20:01:56.858  INFO 16148 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:01:57.903  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
-2021-09-02 20:01:57.942  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
-2021-09-02 20:01:57.942  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:02:18.733  INFO 16148 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.post', args=[Comment{id=null, nickname='启航', email='1518607977@qq.com', content='哈哈哈哈哈', avator='null', createdDate=null}]}
-2021-09-02 20:02:18.797  INFO 16148 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : Result : redirect:/comments/57
-2021-09-02 20:02:18.797  INFO 16148 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:02:18.813  INFO 16148 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
-2021-09-02 20:02:18.820  INFO 16148 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
-2021-09-02 20:02:18.820  INFO 16148 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:04:22.817  INFO 16148 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[57, {}]}
-2021-09-02 20:04:22.831  INFO 16148 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : Result : blog
-2021-09-02 20:04:22.831  INFO 16148 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:04:23.520  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
-2021-09-02 20:04:23.531  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
-2021-09-02 20:04:23.531  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:05:06.539  INFO 16148 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[57, {}]}
-2021-09-02 20:05:06.547  INFO 16148 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : Result : blog
-2021-09-02 20:05:06.548  INFO 16148 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:05:07.172  INFO 16148 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
-2021-09-02 20:05:07.182  INFO 16148 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
-2021-09-02 20:05:07.182  INFO 16148 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:06:30.029  INFO 16148 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[57, {}]}
-2021-09-02 20:06:30.038  INFO 16148 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : Result : blog
-2021-09-02 20:06:30.038  INFO 16148 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:06:30.758  INFO 16148 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
-2021-09-02 20:06:30.772  INFO 16148 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
-2021-09-02 20:06:30.773  INFO 16148 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:06:43.786  INFO 16148 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.index', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}]}
-2021-09-02 20:06:43.800  INFO 16148 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : Result : index
-2021-09-02 20:06:43.800  INFO 16148 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:06:45.622  INFO 16148 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[57, {}]}
-2021-09-02 20:06:45.629  INFO 16148 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : Result : blog
-2021-09-02 20:06:45.630  INFO 16148 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:06:46.632  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
-2021-09-02 20:06:46.642  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
-2021-09-02 20:06:46.643  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:08:23.813  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[57, {}]}
-2021-09-02 20:08:23.825  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : Result : blog
-2021-09-02 20:08:23.826  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:08:24.890  INFO 16148 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
-2021-09-02 20:08:24.903  INFO 16148 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
-2021-09-02 20:08:24.903  INFO 16148 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:08:30.267  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[57, {}]}
-2021-09-02 20:08:30.273  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : Result : blog
-2021-09-02 20:08:30.273  INFO 16148 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:08:31.267  INFO 16148 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
-2021-09-02 20:08:31.274  INFO 16148 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
-2021-09-02 20:08:31.274  INFO 16148 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:09:26.322  INFO 16148 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.post', args=[Comment{id=null, nickname='启航', email='1518607977@qq.com', content='新的评论', avator='null', createdDate=null}]}
-2021-09-02 20:09:26.334  INFO 16148 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : Result : redirect:/comments/57
-2021-09-02 20:09:26.334  INFO 16148 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
-2021-09-02 20:09:26.340  INFO 16148 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
-2021-09-02 20:09:26.346  INFO 16148 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
-2021-09-02 20:09:26.346  INFO 16148 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:45:50.054  INFO 7548 --- [restartedMain] c.f.FirstBlogAdminApplication            : Starting FirstBlogAdminApplication using Java 1.8.0_141 on LAPTOP-QHFK85TB with PID 7548 (D:\c桌面\Java工程与笔记\FirstBlog_Admin\target\classes started by knight1527 in D:\c桌面\Java工程与笔记\FirstBlog_Admin)
+2021-09-05 14:45:50.059 DEBUG 7548 --- [restartedMain] c.f.FirstBlogAdminApplication            : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-05 14:45:50.060  INFO 7548 --- [restartedMain] c.f.FirstBlogAdminApplication            : The following profiles are active: dev
+2021-09-05 14:45:50.119  INFO 7548 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-05 14:45:50.120  INFO 7548 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-05 14:45:50.805  INFO 7548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-05 14:45:50.889  INFO 7548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 5 JPA repository interfaces.
+2021-09-05 14:45:51.646  INFO 7548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-05 14:45:51.656  INFO 7548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-05 14:45:51.656  INFO 7548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-09-05 14:45:51.658  INFO 7548 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2021-09-05 14:45:51.658  INFO 7548 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2021-09-05 14:45:51.659  INFO 7548 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2021-09-05 14:45:51.659  INFO 7548 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-09-05 14:45:51.675  INFO 7548 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2021-09-05 14:45:51.771  INFO 7548 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-05 14:45:51.771  INFO 7548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1650 ms
+2021-09-05 14:45:51.932  INFO 7548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-05 14:45:51.982  INFO 7548 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-05 14:45:52.111  INFO 7548 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-05 14:45:52.213  INFO 7548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-05 14:45:52.214  WARN 7548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-09-05 14:45:52.326  INFO 7548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-05 14:45:52.345  INFO 7548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-09-05 14:45:53.119  INFO 7548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-05 14:45:53.127  INFO 7548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-05 14:45:53.883  WARN 7548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-05 14:45:54.355  INFO 7548 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-05 14:45:54.855  INFO 7548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-05 14:45:54.888  INFO 7548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-05 14:45:54.897  INFO 7548 --- [restartedMain] c.f.FirstBlogAdminApplication            : Started FirstBlogAdminApplication in 5.353 seconds (JVM running for 6.824)
+2021-09-05 14:46:08.841  INFO 7548 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-05 14:46:08.842  INFO 7548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-05 14:46:08.843  INFO 7548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-05 14:46:08.883  INFO 7548 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.index', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}]}
+2021-09-05 14:46:09.002  WARN 7548 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-05 14:46:09.016  WARN 7548 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-05 14:46:09.022  INFO 7548 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : Result : index
+2021-09-05 14:46:09.022  INFO 7548 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:46:11.745  INFO 7548 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[57, {}]}
+2021-09-05 14:46:11.859  INFO 7548 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : Result : blog
+2021-09-05 14:46:11.859  INFO 7548 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:46:12.749  INFO 7548 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
+2021-09-05 14:46:12.830  INFO 7548 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
+2021-09-05 14:46:12.831  INFO 7548 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:46:53.904  INFO 7548 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[57, {}]}
+2021-09-05 14:46:53.922  INFO 7548 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : Result : blog
+2021-09-05 14:46:53.922  INFO 7548 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:46:54.624  INFO 7548 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
+2021-09-05 14:46:54.642  INFO 7548 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
+2021-09-05 14:46:54.643  INFO 7548 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:47:01.065  INFO 7548 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[57, {}]}
+2021-09-05 14:47:01.076  INFO 7548 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : Result : blog
+2021-09-05 14:47:01.076  INFO 7548 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:47:01.704  INFO 7548 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/57', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[57, {}]}
+2021-09-05 14:47:01.722  INFO 7548 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
+2021-09-05 14:47:01.723  INFO 7548 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:47:07.936  INFO 7548 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/56', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[56, {}]}
+2021-09-05 14:47:07.946  INFO 7548 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : Result : blog
+2021-09-05 14:47:07.946  INFO 7548 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:47:08.820  INFO 7548 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/56', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[56, {}]}
+2021-09-05 14:47:08.824  INFO 7548 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
+2021-09-05 14:47:08.825  INFO 7548 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:47:39.661  INFO 7548 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/56', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[56, {}]}
+2021-09-05 14:47:39.670  INFO 7548 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : Result : blog
+2021-09-05 14:47:39.671  INFO 7548 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:47:40.273  INFO 7548 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/56', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[56, {}]}
+2021-09-05 14:47:40.276  INFO 7548 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
+2021-09-05 14:47:40.276  INFO 7548 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:47:49.453  INFO 7548 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/40', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[40, {}]}
+2021-09-05 14:47:49.462  INFO 7548 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : Result : blog
+2021-09-05 14:47:49.463  INFO 7548 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 14:47:50.124  INFO 7548 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/40', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[40, {}]}
+2021-09-05 14:47:50.127  INFO 7548 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
+2021-09-05 14:47:50.128  INFO 7548 --- [http-nio-8080-exec-9] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 15:33:04.136  INFO 9896 --- [restartedMain] c.f.FirstBlogAdminApplication            : Starting FirstBlogAdminApplication using Java 1.8.0_141 on LAPTOP-QHFK85TB with PID 9896 (D:\c桌面\Java工程与笔记\FirstBlog_Admin\target\classes started by knight1527 in D:\c桌面\Java工程与笔记\FirstBlog_Admin)
+2021-09-05 15:33:04.139 DEBUG 9896 --- [restartedMain] c.f.FirstBlogAdminApplication            : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-05 15:33:04.139  INFO 9896 --- [restartedMain] c.f.FirstBlogAdminApplication            : The following profiles are active: dev
+2021-09-05 15:33:04.176  INFO 9896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-05 15:33:04.176  INFO 9896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-05 15:33:04.800  INFO 9896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-05 15:33:04.881  INFO 9896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 5 JPA repository interfaces.
+2021-09-05 15:33:05.591  INFO 9896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-05 15:33:05.599  INFO 9896 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-05 15:33:05.599  INFO 9896 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-09-05 15:33:05.601  INFO 9896 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2021-09-05 15:33:05.602  INFO 9896 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2021-09-05 15:33:05.602  INFO 9896 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2021-09-05 15:33:05.602  INFO 9896 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-09-05 15:33:05.613  INFO 9896 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2021-09-05 15:33:05.707  INFO 9896 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-05 15:33:05.708  INFO 9896 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1531 ms
+2021-09-05 15:33:05.867  INFO 9896 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-05 15:33:05.919  INFO 9896 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-05 15:33:06.046  INFO 9896 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-05 15:33:06.151  INFO 9896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-05 15:33:06.152  WARN 9896 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-09-05 15:33:06.265  INFO 9896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-05 15:33:06.283  INFO 9896 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-09-05 15:33:07.064  INFO 9896 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-05 15:33:07.072  INFO 9896 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-05 15:33:07.828  WARN 9896 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-05 15:33:08.276  INFO 9896 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-05 15:33:08.691  INFO 9896 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-05 15:33:08.722  INFO 9896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-05 15:33:08.731  INFO 9896 --- [restartedMain] c.f.FirstBlogAdminApplication            : Started FirstBlogAdminApplication in 5.066 seconds (JVM running for 6.373)
+2021-09-05 15:33:17.138  INFO 9896 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-05 15:33:17.139  INFO 9896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-05 15:33:17.140  INFO 9896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-05 15:33:17.179  INFO 9896 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.index', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}]}
+2021-09-05 15:33:17.287  WARN 9896 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-05 15:33:17.299  WARN 9896 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-05 15:33:17.304  INFO 9896 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : Result : index
+2021-09-05 15:33:17.304  INFO 9896 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 15:33:20.526  INFO 9896 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TypeShowController.types', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}, -1]}
+2021-09-05 15:33:20.539  INFO 9896 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : Result : types
+2021-09-05 15:33:20.540  INFO 9896 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 15:33:31.394  INFO 9896 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/types/5', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TypeShowController.types', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}, 5]}
+2021-09-05 15:33:31.402  INFO 9896 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : Result : types
+2021-09-05 15:33:31.402  INFO 9896 --- [http-nio-8080-exec-3] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 15:33:34.130  INFO 9896 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/types/1', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TypeShowController.types', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}, 1]}
+2021-09-05 15:33:34.136  INFO 9896 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : Result : types
+2021-09-05 15:33:34.136  INFO 9896 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 15:33:41.762  INFO 9896 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/types/5', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TypeShowController.types', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}, 5]}
+2021-09-05 15:33:41.769  INFO 9896 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : Result : types
+2021-09-05 15:33:41.769  INFO 9896 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 15:33:49.039  INFO 9896 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/types/1', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TypeShowController.types', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}, 1]}
+2021-09-05 15:33:49.047  INFO 9896 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : Result : types
+2021-09-05 15:33:49.047  INFO 9896 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 15:33:59.344  INFO 9896 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/types/5', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TypeShowController.types', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}, 5]}
+2021-09-05 15:33:59.352  INFO 9896 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : Result : types
+2021-09-05 15:33:59.352  INFO 9896 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 15:34:01.479  INFO 9896 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/types/1', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TypeShowController.types', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}, 1]}
+2021-09-05 15:34:01.487  INFO 9896 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : Result : types
+2021-09-05 15:34:01.488  INFO 9896 --- [http-nio-8080-exec-4] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 15:34:52.440  INFO 9896 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/types/2', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TypeShowController.types', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}, 2]}
+2021-09-05 15:34:52.446  INFO 9896 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : Result : types
+2021-09-05 15:34:52.447  INFO 9896 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-05 15:34:53.887  INFO 9896 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/types/1', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TypeShowController.types', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}, 1]}
+2021-09-05 15:34:53.894  INFO 9896 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : Result : types
+2021-09-05 15:34:53.894  INFO 9896 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------

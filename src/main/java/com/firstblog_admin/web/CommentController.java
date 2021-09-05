@@ -41,7 +41,13 @@ public class CommentController {
     public String post(Comment comment){
         Long blogId =  comment.getBlog().getId();
         comment.setBlog(blogService.getBlog(blogId));
-        comment.setAvator(avator);
+        if(comment.getNickname().equals("启航") && comment.getEmail().equals("1518607977@qq.com")){
+            comment.setAvator("https://unsplash.it/100/100?image=1005");
+            comment.setAdminComment(true);
+            /*comment.setNickname("启航");*/
+        }else{
+            comment.setAvator(avator);
+        }
         commentService.saveComment(comment);
         return "redirect:/comments/" + blogId;
     }
