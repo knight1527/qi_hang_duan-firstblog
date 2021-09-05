@@ -33,7 +33,7 @@ public class TypeShowController {
     private BlogService blogService;
 
     @GetMapping("/types/{id}")
-    public String types(@PageableDefault(size = 3,sort = {"updatedDate"},direction = Sort.Direction.DESC) Pageable pageable,
+    public String types(@PageableDefault(size = 5,sort = {"updatedDate"},direction = Sort.Direction.DESC) Pageable pageable,
                         Model model,
                         @PathVariable Long id){
         //查询type全表参数足够大。
