@@ -82,27 +82,29 @@
                 <div class="ui blue label m-margin-top-large" th:each="tag : ${blog.tags}" th:text="${tag.name}">图论
                 </div>
                 <!--打赏-->
-                <div class="ui basic center aligned segment">
-                    <button class="ui payButton blue basic circular button"><i class="thumbs up outline icon"></i>赞赏</button>
-                </div>
-                <div class="ui payShang flowing popup transition hidden">
-                    <div class="ui blue center aligned basic label">
-                        <div class="ui images" style="font-size: 12px">
-                            <div class="ui image">
-                                <img src="../static/images/微信.jpg" th:src="@{/images/微信.jpg}" alt="" class="rounded bordered image"
-                                     style="width: 160px">
-                                <div>微信</div>
-                            </div>
-                            <div class="ui image">
-                                <img src="../static/images/微信.jpg" th:src="@{/images/微信.jpg}" alt="" class="rounded bordered image"
-                                     style="width:160px">
-                                <div>支付宝</div>
+                <div th:if="${blog.appreciation}">
+                    <div class="ui basic center aligned segment">
+                        <button class="ui payButton blue basic circular button"><i class="thumbs up outline icon"></i>赞赏</button>
+                    </div>
+                    <div class="ui payShang flowing popup transition hidden">
+                        <div class="ui blue center aligned basic label">
+                            <div class="ui images" style="font-size: 12px">
+                                <div class="ui image">
+                                    <img src="../static/images/微信.jpg" th:src="@{/images/微信.jpg}" alt="" class="rounded bordered image"
+                                         style="width: 160px">
+                                    <div>微信</div>
+                                </div>
+                                <div class="ui image">
+                                    <img src="../static/images/微信.jpg" th:src="@{/images/微信.jpg}" alt="" class="rounded bordered image"
+                                         style="width:160px">
+                                    <div>支付宝</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="ui attached teal message">
+            <div class="ui attached teal message" th:if="${blog.shareStatement}">
                 <!--message-->
                 <div class="ui middle aligned grid">
                     <div class="eleven wide column">
@@ -125,7 +127,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ui attached segment">
+            <div class="ui attached segment" th:if="${blog.commentabled}">
                 <!--comments-->
                 <div id="comment-container"  class="ui blue segment">
                     <div th:fragment="commentList">
@@ -413,7 +415,7 @@
             position : 'left center'
         });
         /*二维码生成*/
-        var server = "http://www.qihang.me";
+        var server =/*[[#{blog.serurl}]]*/"http://www.qihang.me";
         var url = /*[[@{/blog/{id}(id=${blog.id})}]]*/"";
         var qrcode = new QRCode(document.getElementById("qrcode"), {
             text: server+url,

@@ -62,7 +62,8 @@
 
 
             <div class="ui top attached blue segment">
-                <div class="ui vertical segment m-padded-big m-padded-tb-big-f m-mobile-lr-clear" th:each="blog : ${page.content}">
+                <div th:if="${blog.published}" class="ui vertical segment m-padded-big m-padded-tb-big-f m-mobile-lr-clear"
+                      th:each="blog : ${page.content}">
                     <div class="ui middle aligned mobile reversed stackable grid">
                         <div class="eleven wide column">
                             <h3

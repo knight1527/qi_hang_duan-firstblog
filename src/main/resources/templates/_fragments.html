@@ -55,6 +55,67 @@
     </a>
 </nav>
 
+<div th:fragment="blogDetails" class="ui vertical segment m-padded-big m-padded-tb-big-f m-mobile-lr-clear"
+     th:if="${blog.published}"
+     th:each="blog : ${page.content}">
+    <div class="ui middle aligned mobile reversed stackable grid">
+        <div class="eleven wide column">
+            <h3
+                    class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
+                                         th:text="${blog.title}">Article
+                Title</a></h3>
+            <p class="m-text" th:text="|${blog.description}......|">
+                人类文明的发展要经历挫折，物质文明和汉语文明均是如此。我们还是中华民族兴旺发达的需要。所以，我们要恢复汉语昔日的光彩，提高自身文化的根基，使汉语重回民族文化的殿堂。</p>
+            <div class="ui stackable grid">
+                <div class="row">
+                    <div class="eleven wide column">
+                        <div class="ui mini horizontal link list">
+                            <div class="item">
+                                <img src="https://unsplash.it/800/450?image=1005"
+                                     class="ui avatar image" th:src="@{${blog.user.avator}}">
+                                <div class="content"><a href="#" class="header m-text-thin"
+                                                        th:text="${blog.user.nickname}">段启航
+                                </a></div>
+                            </div>
+                            <div class="item">
+                                <i class="clock outline icon"></i><span
+                                    th:text="${#dates.format(blog.updatedDate,'yyyy-MM-dd')}">2021-7
+                                                        -15</span>
+                            </div>
+                            <div class="item">
+                                <i class="meh outline icon"></i><span th:text="${blog.views}">2
+                                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right aligned five wide column">
+                        <a href="#" target="_blank"
+                           class="ui mini blue basic label m-padded-mini m-text-thin"
+                           th:text="${blog.type.name}">分类</a>
+                    </div>
+                </div>
+                <div class="row" style="padding: 0 !important;">
+                    <div class="m-padded-tag">
+                        <i class="tags mini icon m-opacity-mini m-padded-normal"></i>
+                    </div>
+                    <div class="m-padded-tag" th:each="tag : ${blog.tags}">
+                        <a href="#" target="_blank"
+                           class="ui label m-margin-tb-tiny m-padded-mini"
+                           th:text="${tag.name}">
+                            JAVA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="five wide column">
+            <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}"
+                     class="ui rounded image">
+            </a>
+        </div>
+    </div>
+</div>
 <!--底部-->
 <footer th:fragment="footer" class="ui vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
@@ -78,9 +139,9 @@
             <div class="three wide column">
                 <h4 class="ui header m-text-spaced m-text-lined">联系我</h4>
                 <div class="ui link list">
-                    <a href="#" class="item">QQ:1518607977</a>
-                    <a href="#" class="item">WeChat:17365560507</a>
-                    <a href="#" class="item">Email:1518607977@qq.com</a>
+                    <a href="#" class="item" th:text="#{index.qq}">QQ:1518607977</a>
+                    <a href="#" class="item" th:text="#{index.wechat}">WeChat:17365560507</a>
+                    <a href="#" class="item" th:text="#{index.email}">Email:1518607977@qq.com</a>
                 </div>
             </div>
             <div class="seven wide column">

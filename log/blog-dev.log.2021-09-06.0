@@ -1,0 +1,151 @@
+2021-09-06 20:18:04.751  INFO 10804 --- [restartedMain] c.f.FirstBlogAdminApplication            : Starting FirstBlogAdminApplication using Java 1.8.0_141 on LAPTOP-QHFK85TB with PID 10804 (D:\c桌面\Java工程与笔记\FirstBlog_Admin\target\classes started by knight1527 in D:\c桌面\Java工程与笔记\FirstBlog_Admin)
+2021-09-06 20:18:04.762 DEBUG 10804 --- [restartedMain] c.f.FirstBlogAdminApplication            : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-06 20:18:04.762  INFO 10804 --- [restartedMain] c.f.FirstBlogAdminApplication            : The following profiles are active: dev
+2021-09-06 20:18:04.826  INFO 10804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-06 20:18:04.827  INFO 10804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-06 20:18:05.609  INFO 10804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-06 20:18:05.697  INFO 10804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 5 JPA repository interfaces.
+2021-09-06 20:18:06.475  INFO 10804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-06 20:18:06.484  INFO 10804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-06 20:18:06.484  INFO 10804 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-09-06 20:18:06.487  INFO 10804 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2021-09-06 20:18:06.487  INFO 10804 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2021-09-06 20:18:06.487  INFO 10804 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2021-09-06 20:18:06.487  INFO 10804 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-09-06 20:18:06.503  INFO 10804 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2021-09-06 20:18:06.600  INFO 10804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-06 20:18:06.601  INFO 10804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1773 ms
+2021-09-06 20:18:06.766  INFO 10804 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-06 20:18:06.815  INFO 10804 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-06 20:18:06.946  INFO 10804 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-06 20:18:07.055  INFO 10804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-06 20:18:07.056  WARN 10804 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-09-06 20:18:07.197  INFO 10804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-06 20:18:07.216  INFO 10804 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-09-06 20:18:08.019  INFO 10804 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-06 20:18:08.028  INFO 10804 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-06 20:18:08.805  WARN 10804 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-06 20:18:09.265  INFO 10804 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-06 20:18:09.780  INFO 10804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-06 20:18:09.813  INFO 10804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-06 20:18:09.823  INFO 10804 --- [restartedMain] c.f.FirstBlogAdminApplication            : Started FirstBlogAdminApplication in 5.633 seconds (JVM running for 7.032)
+2021-09-06 20:18:16.993  INFO 10804 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-06 20:18:16.993  INFO 10804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-06 20:18:16.996  INFO 10804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-09-06 20:18:17.038  INFO 10804 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.index', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}]}
+2021-09-06 20:18:17.142  WARN 10804 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-06 20:18:17.153  WARN 10804 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-06 20:18:17.159  INFO 10804 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : Result : index
+2021-09-06 20:18:17.159  INFO 10804 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:18:19.293  INFO 10804 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TypeShowController.types', args=[Page request [number: 0, size 5, sort: updatedDate: DESC], {}, -1]}
+2021-09-06 20:18:19.306  INFO 10804 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : Result : types
+2021-09-06 20:18:19.306  INFO 10804 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:18:20.116  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updatedDate: DESC], -1, {}]}
+2021-09-06 20:18:20.142  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : Result : tags
+2021-09-06 20:18:20.142  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:18:21.349  INFO 10804 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.ArchivesShowController.archives', args=[{}]}
+2021-09-06 20:18:21.369  INFO 10804 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : Result : archives
+2021-09-06 20:18:21.369  INFO 10804 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:18:39.947  INFO 10804 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.ArchivesShowController.archives', args=[{}]}
+2021-09-06 20:18:39.956  INFO 10804 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : Result : archives
+2021-09-06 20:18:39.956  INFO 10804 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:18:57.518  INFO 10804 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.index', args=[Page request [number: 0, size 3, sort: updatedDate: DESC], {}]}
+2021-09-06 20:18:57.531  INFO 10804 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : Result : index
+2021-09-06 20:18:57.532  INFO 10804 --- [http-nio-8080-exec-1] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:18:59.561  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.ArchivesShowController.archives', args=[{}]}
+2021-09-06 20:18:59.572  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : Result : archives
+2021-09-06 20:18:59.572  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:19:04.353  INFO 10804 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.ArchivesShowController.archives', args=[{}]}
+2021-09-06 20:19:04.364  INFO 10804 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : Result : archives
+2021-09-06 20:19:04.364  INFO 10804 --- [http-nio-8080-exec-6] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:19:08.288  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.ArchivesShowController.archives', args=[{}]}
+2021-09-06 20:19:08.299  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : Result : archives
+2021-09-06 20:19:08.299  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:19:12.533  INFO 10804 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.ArchivesShowController.archives', args=[{}]}
+2021-09-06 20:19:12.543  INFO 10804 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : Result : archives
+2021-09-06 20:19:12.544  INFO 10804 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:19:30.184  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.ArchivesShowController.archives', args=[{}]}
+2021-09-06 20:19:30.192  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : Result : archives
+2021-09-06 20:19:30.192  INFO 10804 --- [http-nio-8080-exec-10] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:19:32.219 ERROR 10804 --- [http-nio-8080-exec-5] c.f.handler.ControllerExceptionHandler   : Request URL : http://localhost:8080/blog/blog.id,Exception : {}
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "blog.id"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NumberFormatException: For input string: "blog.id"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+
+2021-09-06 20:19:32.222  WARN 10804 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "blog.id"]
+2021-09-06 20:22:04.247  INFO 10804 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.ArchivesShowController.archives', args=[{}]}
+2021-09-06 20:22:04.255  INFO 10804 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : Result : archives
+2021-09-06 20:22:04.256  INFO 10804 --- [http-nio-8080-exec-7] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:22:06.103  INFO 10804 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/40', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[40, {}]}
+2021-09-06 20:22:06.166  INFO 10804 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : Result : blog
+2021-09-06 20:22:06.166  INFO 10804 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:22:06.783  INFO 10804 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/40', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[40, {}]}
+2021-09-06 20:22:06.803  INFO 10804 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
+2021-09-06 20:22:06.803  INFO 10804 --- [http-nio-8080-exec-8] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:22:26.814  INFO 10804 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/blog/56', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.IndexController.blog', args=[56, {}]}
+2021-09-06 20:22:26.830  INFO 10804 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : Result : blog
+2021-09-06 20:22:26.830  INFO 10804 --- [http-nio-8080-exec-2] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------
+2021-09-06 20:22:27.668  INFO 10804 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : requestLog : RequestLog{url='http://localhost:8080/comments/56', ip='0:0:0:0:0:0:0:1', classMethod='com.firstblog_admin.web.CommentController.comments', args=[56, {}]}
+2021-09-06 20:22:27.671  INFO 10804 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : Result : blog :: commentList
+2021-09-06 20:22:27.672  INFO 10804 --- [http-nio-8080-exec-5] com.firstblog_admin.aspect.LogAspect     : ----------doAfter----------

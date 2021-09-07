@@ -56,8 +56,9 @@
                     </div>
                     <!--content-->
                     <div class="ui attached segment m-padded-big">
-
-                        <div class="ui vertical segment m-padded-big m-padded-tb-big-f m-mobile-lr-clear" th:each="blog : ${page.content}">
+                        <div class="ui vertical segment m-padded-big m-padded-tb-big-f m-mobile-lr-clear"
+                             th:if="${blog.published}"
+                             th:each="blog : ${page.content}">
                             <div class="ui middle aligned mobile reversed stackable grid">
                                 <div class="eleven wide column">
                                     <h3
@@ -140,13 +141,15 @@
                                     <i class="idea icon"></i>分类
                                 </div>
                                 <div class="right aligned column">
-                                    <a href="#" target="_blank">more<i class="angle double right icon"></i></a>
+                                    <a href="#" th:href="@{/types/-1}" target="_blank">more<i
+                                            class="angle double right icon"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="ui grey segment">
                             <div class="ui fluid vertical menu">
-                                <a href="#" target="_blank" class="item" th:each="type : ${types}">
+                                <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item"
+                                   th:each="type : ${types}">
                                     <span th:text="${type.name}">算法</span>
                                     <div class="ui blue left pointing label" th:text="${#arrays.length(type.blogs)}">12
                                     </div>
@@ -163,12 +166,14 @@
                                     <i class="tags icon"></i>标签
                                 </div>
                                 <div class="right aligned column">
-                                    <a href="#" target="_blank">more<i class="angle double right icon"></i></a>
+                                    <a href="#" th:href="@{/tags/-1}" target="_blank">more<i
+                                            class="angle double right icon"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="ui grey segment">
-                            <a href="#" target="_blank" class="ui blue label m-margin-tb-tiny" th:each="tag : ${tags}">
+                            <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui blue label m-margin-tb-tiny"
+                               th:each="tag : ${tags}">
                                 <span th:text="${tag.name}">JAVA </span><div class="detail"
                                                                              th:text="${#arrays.length(tag.blogs)}">15
                             </div>
